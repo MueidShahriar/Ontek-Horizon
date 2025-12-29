@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Internship - Ontek Horizon</title>
+    <link rel="icon" type="image/png" href="../../images/Ontek.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#0F172A',
+                        accent: '#A855F7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .elegant-gradient {
+            background: linear-gradient(135deg, #000000 0%, #1e1b4b 50%, #172554 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        /* Back to Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            z-index: 99;
+            padding: 0;
+            line-height: 1;
+        }
+        
+        #backToTop i {
+            display: inline-block;
+            font-size: 1.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+        }
+        
+        #backToTop:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
+        }
+        
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #backToTop:active {
+            transform: translateY(0);
+        }
+        
+        .light-mode #backToTop {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .light-mode #backToTop:hover {
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            #backToTop {
+                width: 45px;
+                height: 45px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+                font-size: 1.25rem;
+            }
+        }
+
+
+        /* Light Mode Overrides */
+        .light-mode, .light-mode body {
+            background-color: #ffffff !important;
+            background-image: none !important; 
+            color: #111827 !important;
+        }
+        .light-mode .elegant-gradient { background: #ffffff !important; }
+        .light-mode .glass-effect, .light-mode #navbar {
+            background: rgba(255, 255, 255, 0.98) !important;
+            border-bottom: 1px solid #e5e7eb !important;
+            color: #111827 !important;
+        }
+        .light-mode .text-white { color: #000000 !important; }
+        .light-mode .text-slate-300 { color: #4b5563 !important; }
+        .light-mode .text-slate-400 { color: #6b7280 !important; }
+        .light-mode input, .light-mode select, .light-mode textarea {
+            background-color: #f9fafb !important;
+            border-color: #d1d5db !important;
+            color: #111827 !important;
+        }
+        .light-mode .bg-slate-900\/50 { background-color: #f3f4f6 !important; border-color: #e5e7eb !important; }
+        .light-mode nav a { color: #111827 !important; }
+
+        .theme-toggle-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.45rem; border-radius: 0.5rem; }
+        .light-mode .theme-toggle-btn { color: #111827; background: #e5e7eb; }
+    </style>
+</head>
+<body class="font-sans text-slate-300 antialiased elegant-gradient">
+    <nav class="fixed w-full z-50 glass-effect transition-all duration-300 h-16 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between items-center h-full">
+                <a href="../index.html" class="flex-shrink-0 flex items-center gap-2">
+                    <img src="../../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-10 w-auto">
+                    <span class="font-heading font-bold text-xl text-white">Ontek<span class="text-blue-500">Horizon</span></span>
+                </a>
+
+                <div class="flex items-center gap-4">
+                    <a href="../index.html" class="text-sm font-medium hover:text-white transition-colors">Back to Home</a>
+                    <button id="theme-toggle" class="theme-toggle-btn bg-slate-800/40 text-white hover:bg-slate-700/50 transition" aria-label="Toggle theme">
+                        <i id="theme-icon" class="ph ph-moon-stars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        
+        <div class="text-center mb-12" data-aos="fade-down">
+            <h1 class="text-4xl md:text-5xl font-heading font-extrabold text-white mb-4">Join Our Internship Program</h1>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto">Kickstart your career with real-world experience. We are looking for passionate individuals ready to learn and grow.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-10">
+            <div class="lg:col-span-2 space-y-6" data-aos="fade-right">
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-700/50">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="ph-duotone ph-star text-yellow-400"></i> Why Join Us?
+                    </h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-green-400 mt-1"></i> <span>Work on live international projects.</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-green-400 mt-1"></i> <span>Mentorship from industry experts.</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-green-400 mt-1"></i> <span>Flexible hours & Remote options.</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-green-400 mt-1"></i> <span>Certificate & Job recommendation.</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-green-400 mt-1"></i> <span>Potential for full-time employment.</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/50 backdrop-blur-md p-6 rounded-xl border border-slate-700/50">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="ph-duotone ph-briefcase text-blue-400"></i> Available Domains
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-300 rounded-lg text-sm border border-blue-500/20">Web Development</span>
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-300 rounded-lg text-sm border border-purple-500/20">Graphics Design</span>
+                        <span class="px-3 py-1 bg-pink-500/10 text-pink-300 rounded-lg text-sm border border-pink-500/20">Digital Marketing</span>
+                        <span class="px-3 py-1 bg-green-500/10 text-green-300 rounded-lg text-sm border border-green-500/20">Content Writing</span>
+                        <span class="px-3 py-1 bg-orange-500/10 text-orange-300 rounded-lg text-sm border border-orange-500/20">UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3" data-aos="fade-left">
+                <div class="bg-slate-900/50 backdrop-blur-md p-8 rounded-2xl border border-slate-700 shadow-2xl">
+                    <h2 class="text-2xl font-bold text-white mb-6">Application Form</h2>
+                    
+                    <form id="internshipForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="fullname" class="text-sm font-medium text-slate-300">Full Name</label>
+                                <input type="text" id="fullname" name="fullname" required 
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors placeholder-slate-500"
+                                    placeholder="John Doe">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="email" class="text-sm font-medium text-slate-300">Email Address</label>
+                                <input type="email" id="email" name="email" required 
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors placeholder-slate-500"
+                                    placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="phone" class="text-sm font-medium text-slate-300">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required 
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors placeholder-slate-500"
+                                    placeholder="+880 1XXX XXXXXX">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="position" class="text-sm font-medium text-slate-300">Interested Position</label>
+                                <select id="position" name="position" required
+                                    class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors">
+                                    <option value="" disabled selected>Select a role</option>
+                                    <option value="web-dev">Web Development (React/Node)</option>
+                                    <option value="graphics">Graphics Design</option>
+                                    <option value="marketing">Digital Marketing</option>
+                                    <option value="content">Content Writing</option>
+                                    <option value="uiux">UI/UX Design</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="portfolio" class="text-sm font-medium text-slate-300">Portfolio / GitHub / LinkedIn URL</label>
+                            <input type="url" id="portfolio" name="portfolio" 
+                                class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors placeholder-slate-500"
+                                placeholder="https://linkedin.com/in/yourprofile">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="message" class="text-sm font-medium text-slate-300">Why do you want to join us?</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors placeholder-slate-500"
+                                placeholder="Tell us briefly about your skills and motivation..."></textarea>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-slate-300">Upload CV / Resume (PDF)</label>
+                            <div class="flex items-center justify-center w-full">
+                                <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-32 border-2 border-slate-700 border-dashed rounded-lg cursor-pointer bg-slate-800 hover:bg-slate-750 hover:border-blue-500 transition-colors">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <i class="ph ph-cloud-arrow-up text-3xl text-slate-400 mb-2"></i>
+                                        <p class="text-sm text-slate-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                        <p class="text-xs text-slate-500">PDF, DOCX (MAX. 2MB)</p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" class="hidden" accept=".pdf,.doc,.docx" />
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 rounded-lg shadow-lg shadow-blue-600/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
+                            <span>Submit Application</span>
+                            <i class="ph-bold ph-paper-plane-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-6 text-slate-500 text-sm border-t border-slate-800 bg-black/40">
+        &copy; 2025 Ontek Horizon. All rights reserved.
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Form Handling (Simulated)
+        document.getElementById('internshipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="ph ph-spinner animate-spin text-xl"></i> Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = '<i class="ph-bold ph-check-circle text-xl"></i> Application Sent!';
+                btn.classList.remove('from-blue-600', 'to-purple-600');
+                btn.classList.add('bg-green-600');
+                
+                // Optional: Reset form
+                // this.reset(); 
+                
+                setTimeout(() => {
+                    alert("Thank you for applying! We will review your application and get back to you shortly.");
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-green-600');
+                    btn.classList.add('from-blue-600', 'to-purple-600');
+                }, 1000);
+            }, 1500);
+        });
+
+        // Theme Toggle (Shared Logic)
+        (function(){
+            const btn = document.getElementById('theme-toggle');
+            const icon = document.getElementById('theme-icon');
+
+            function setTheme(theme){
+                if(theme === 'light'){
+                    document.body.classList.add('light-mode');
+                    if(icon) icon.className = 'ph ph-sun text-xl';
+                } else {
+                    document.body.classList.remove('light-mode');
+                    if(icon) icon.className = 'ph ph-moon-stars text-xl';
+                }
+                try{ localStorage.setItem('ontek-theme', theme); }catch(e){}
+            }
+
+            let saved = null;
+            try{ saved = localStorage.getItem('ontek-theme'); }catch(e){}
+            if(!saved){ saved = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark'; }
+            setTheme(saved);
+
+            if(btn) btn.addEventListener('click', ()=> setTheme(document.body.classList.contains('light-mode') ? 'dark' : 'light'));
+
+        // Back to Top Button Functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            });
+        }
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        })();
+    </script>
+    <button id="backToTop" title="Back to top">
+        <i class="ph-solid ph-arrow-up"></i>
+    </button>
+    </body>
+</html>
