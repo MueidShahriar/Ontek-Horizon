@@ -312,7 +312,7 @@
     
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
     <script>
         // Firebase Configuration
         const firebaseConfig = {
@@ -322,17 +322,18 @@
             storageBucket: "ontek-horizon.firebasestorage.app",
             messagingSenderId: "210494330142",
             appId: "1:210494330142:web:09c86a149fdecfb391a50f",
-            measurementId: "G-K9YWTK029X"
+            measurementId: "G-K9YWTK029X",
+            databaseURL: "https://ontek-horizon-default-rtdb.firebaseio.com"
         };
         firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
+        const database = firebase.database();
     </script>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 400, once: true, offset: 50, easing: 'ease-out' });
 
-        // Form Handling with Firebase
+        // Form Handling with Firebase Realtime Database
         document.getElementById('seminarForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const btn = this.querySelector('button[type="submit"]');
@@ -354,7 +355,8 @@
             };
 
             try {
-                await db.collection('seminar_registrations').add(formData);
+                const newRef = database.ref('seminar_registrations').push();
+                await newRef.set(formData);
                 btn.innerHTML = '<i class="ph-bold ph-check-circle text-xl"></i> Seat Reserved!';
                 btn.classList.remove('from-blue-600', 'to-cyan-600');
                 btn.classList.add('bg-green-600');
