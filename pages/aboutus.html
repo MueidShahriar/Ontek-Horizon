@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Ontek Horizon - Learn about our company, mission, and values.">
+    <meta name="author" content="Ontek Horizon">
+    <meta name="theme-color" content="#3B82F6">
+    <link rel="icon" type="image/png" href="../images/O.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>About Us - Ontek Horizon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#0F172A',
+                        accent: '#A855F7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .elegant-gradient {
+            background: linear-gradient(135deg, #000000 0%, #1e1b4b 50%, #172554 100%);
+            background-attachment: fixed;
+        }
+
+        .light-mode, .light-mode body { background-color: #ffffff !important; color: #111827 !important; }
+        .light-mode .glass-effect { background: rgba(255, 255, 255, 0.98) !important; border-bottom: 1px solid #e5e7eb !important; }
+        .light-mode .text-white { color: #000000 !important; font-weight: 700 !important; }
+        .light-mode nav a { color: #111827 !important; font-weight: 600 !important; }
+        .light-mode nav a:hover { color: #2563eb !important; }
+        .light-mode footer { background-color: #ffffff !important; color: #0f1720 !important; border-top-color: #e5e7eb !important; }
+        .light-mode footer * { color: #0f1720 !important; }
+        .light-mode footer a:hover { color: #2563eb !important; }
+        
+        #backToTop { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%); color: white; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; z-index: 99; }
+        #backToTop.show { opacity: 1; visibility: visible; }
+    </style>
+</head>
+<body class="elegant-gradient font-sans text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect transition-all duration-300 nav-height" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="../index.html" class="flex-shrink-0 flex items-center gap-2">
+                    <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-20 w-auto">
+                </a>
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="../index.html" target="_blank" rel="noopener" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Home</a>
+                    <a href="aboutus.html" class="text-white hover:scale-105 font-medium transition-all">About</a>
+                    <a href="services.html" target="_blank" rel="noopener" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Services</a>
+                    <a href="../index.html#trends" target="_blank" rel="noopener" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Trends</a>
+                    <a href="../index.html#careers" target="_blank" rel="noopener" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Careers</a>
+                    <a href="team.html" target="_blank" rel="noopener" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Team</a>
+                    <a href="../index.html#contact" target="_blank" rel="noopener" class="bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all shadow-lg shadow-white/10">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="pt-32 pb-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">About Ontek Horizon</h1>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto">We are a dynamic team of innovators, creators, and strategists dedicated to transforming your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+                <h2 class="text-sm sm:text-base text-purple-400 font-semibold tracking-wide uppercase">Who We Are</h2>
+                <p class="mt-2 text-2xl sm:text-3xl leading-8 font-heading font-extrabold tracking-tight text-white lg:text-4xl">Private E-commerce Consulting & Solutions</p>
+                <p class="mt-3 sm:mt-4 max-w-2xl text-base sm:text-lg lg:text-xl text-slate-400 mx-auto px-2">Helping brands, sellers, and businesses grow and scale successfully on global platforms.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                <div class="relative group" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl transform rotate-3 opacity-40 blur-lg transition-opacity group-hover:opacity-60"></div>
+                    <div class="about-carousel relative rounded-2xl shadow-2xl border border-slate-700/50 overflow-hidden">
+                        <div class="carousel-slide active">
+                            <img src="../images/photo gallery.jpg" alt="Photo Gallery" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/image1.jpg" alt="Gallery Image 1" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/image2.jpg" alt="Gallery Image 2" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../images/Bahir.jpeg" alt="Gallery Image 3" loading="lazy">
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+                            <span class="carousel-dot" onclick="goToSlide(1)"></span>
+                            <span class="carousel-dot" onclick="goToSlide(2)"></span>
+                            <span class="carousel-dot" onclick="goToSlide(3)"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4 sm:space-y-6 lg:space-y-8" data-aos="fade-left">
+                    <div class="bg-gradient-to-br from-blue-100 to-cyan-200 backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-xl shadow-lg border border-blue-300 hover:border-blue-700 hover:from-blue-500 hover:to-cyan-600 transition-all hover:scale-[1.02] hover:shadow-blue-600/50 hover:shadow-2xl duration-300 group" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="p-4 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl text-white shadow-lg shadow-blue-500/30 group-hover:from-blue-700 group-hover:to-cyan-700 group-hover:scale-110 transition-transform duration-300">
+                                <i class="ph-fill ph-binoculars text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-blue-900 group-hover:text-white tracking-tight">Our Vision</h3>
+                        </div>
+                        <p class="text-blue-800 group-hover:text-white leading-relaxed font-medium text-base">
+                            We envision a future where <span class="text-blue-600 group-hover:text-cyan-200 font-bold">every business</span>, regardless of size, can compete on the <span class="text-cyan-600 group-hover:text-blue-200 font-bold">global stage</span>. By bridging <span class="text-purple-600 group-hover:text-purple-200 font-bold">innovation</span> with opportunity, we aim to be the <span class="text-green-600 group-hover:text-green-200 font-bold">driving force</span> behind the next generation of digital success stories.
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-100 to-pink-200 backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-xl shadow-lg border border-purple-300 hover:border-purple-700 hover:from-purple-500 hover:to-pink-600 transition-all hover:scale-[1.02] hover:shadow-purple-600/50 hover:shadow-2xl duration-300 group" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="p-4 bg-gradient-to-br from-purple-400 to-pink-400 rounded-xl text-white shadow-lg shadow-purple-500/30 group-hover:from-purple-700 group-hover:to-pink-700 group-hover:scale-110 transition-transform duration-300">
+                                <i class="ph-fill ph-target text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-purple-900 group-hover:text-white tracking-tight">Our Mission</h3>
+                        </div>
+                        <p class="text-purple-800 group-hover:text-white leading-relaxed font-medium text-base">
+                            To <span class="text-purple-600 group-hover:text-purple-200 font-bold">empower entrepreneurs</span> and enterprises with world-class <span class="text-pink-600 group-hover:text-pink-200 font-bold">e-commerce solutions</span>, cutting-edge <span class="text-blue-600 group-hover:text-blue-200 font-bold">technology</span>, and unmatched <span class="text-cyan-600 group-hover:text-cyan-200 font-bold">strategic insights</span> — turning ambitious ideas into <span class="text-green-600 group-hover:text-green-200 font-bold">thriving realities</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top"><i class="ph-bold ph-arrow-up"></i></button>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black/40 backdrop-blur-xl text-white pt-12 sm:pt-16 pb-6 sm:pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-6 cursor-pointer" onclick="window.scrollTo(0,0)">
+                        <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-16 w-auto">
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Your partner for scaling globally on Amazon and optimizing digital commerce operations.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1CFhjbwtVv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                        <a href="https://www.linkedin.com/company/ontek-horizon/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><a href="aboutus.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="../index.html#trends" class="hover:text-primary transition-colors">Global Trends</a></li>
+                        <li><a href="../index.html#careers" class="hover:text-primary transition-colors">Careers & Internships</a></li>
+                        <li><a href="team.html" class="hover:text-primary transition-colors">Team Members</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li>Software Development</li>
+                        <li>E-commerce Solutions</li>
+                        <li>Amazon FBA & PPC</li>
+                        <li>Digital Marketing</li>
+                        <li>Graphics Design</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="flex items-start gap-3"><i class="ph-fill ph-map-pin text-primary mt-1"></i><span>Level-5, Block-C, Silicon Tower,<br>Hi-Tech Park, Rajshahi, Bangladesh</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-phone text-primary"></i><span>+8801 343550533</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-envelope-simple text-primary"></i><span>asifiqbal.abir@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm text-center md:text-left">&copy; 2026 Ontek Horizon. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm text-slate-500">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        if (window.AOS) {
+            AOS.init();
+        }
+
+        // Gallery slider for the vision/mission block
+        const slides = document.querySelectorAll('.about-carousel .carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+
+        function goToSlide(index) {
+            if (!slides.length) return;
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide]?.classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide]?.classList.add('active');
+        }
+
+        function nextSlide() {
+            if (!slides.length) return;
+            const next = (currentSlide + 1) % slides.length;
+            goToSlide(next);
+        }
+
+        if (slides.length) {
+            setInterval(nextSlide, 4000);
+        }
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('show', window.scrollY > 200);
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ontek Horizon Services - End-to-End Solutions including Software Development, E-commerce, AI, and more.">
+    <meta name="keywords" content="services, software development, e-commerce, AI, digital marketing">
+    <meta name="author" content="Ontek Horizon">
+    <meta name="theme-color" content="#3B82F6">
+    <link rel="icon" type="image/png" href="../images/O.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Services - Ontek Horizon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#0F172A',
+                        accent: '#A855F7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .elegant-gradient {
+            background: linear-gradient(135deg, #000000 0%, #1e1b4b 50%, #172554 100%);
+            background-attachment: fixed;
+            transition: background 0.5s ease;
+        }
+
+        .light-mode, 
+        .light-mode body {
+            background-color: #ffffff !important;
+            background-image: none !important; 
+            color: #111827 !important;
+        }
+        
+        .light-mode .elegant-gradient { background: #ffffff !important; }
+
+        .light-mode .glass-effect,
+        .light-mode #navbar {
+            background: rgba(255, 255, 255, 0.98) !important;
+            border-bottom: 1px solid #e5e7eb !important;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .light-mode .text-white { color: #000000 !important; font-weight: 700 !important; } 
+        .light-mode .text-slate-300 { color: #374151 !important; font-weight: 500 !important; } 
+        .light-mode .text-slate-400 { color: #4b5563 !important; font-weight: 500 !important; } 
+        .light-mode .text-slate-500, .light-mode .text-slate-600 { color: #111827 !important; font-weight: 600 !important; }
+        .light-mode footer, .light-mode footer p, .light-mode footer a, .light-mode footer .text-slate-500 { color: #111827 !important; }
+
+        .light-mode .text-blue-400 { color: #2563eb !important; } 
+        .light-mode .text-purple-400 { color: #9333ea !important; } 
+        .light-mode .text-green-400 { color: #16a34a !important; } 
+        .light-mode .text-pink-400 { color: #db2777 !important; } 
+        .light-mode nav a { color: #111827 !important; font-weight: 600 !important; }
+        .light-mode nav a:hover { color: #2563eb !important; }
+        
+        .light-mode .bg-slate-900, .light-mode .bg-slate-900\/40, .light-mode .bg-white\/5 {
+            background-color: #f9fafb !important; 
+            border: 1px solid #e5e7eb !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .light-mode .border-slate-800, .light-mode .border-white\/10, .light-mode .border-white\/5 { border-color: #d1d5db !important; }
+
+        .light-mode #mobile-menu { background-color: #ffffff !important; border-top: 1px solid #e5e7eb !important; }
+        .light-mode .text-transparent { background-image: linear-gradient(to right, #2563eb, #9333ea, #db2777) !important; }
+        .light-mode footer { background-color: #ffffff !important; color: #0f1720 !important; border-top-color: #e5e7eb !important; backdrop-filter: none !important; }
+        .light-mode footer * { color: #0f1720 !important; }
+        .light-mode footer a:hover { color: #2563eb !important; }
+
+        /* Spotlight Effect */
+        .spotlight-card::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.08), transparent 40%);
+            z-index: 2; opacity: 0; transition: opacity 0.5s; pointer-events: none;
+        }
+        .light-mode .spotlight-card::before { background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(37, 99, 235, 0.1), transparent 40%); }
+        .spotlight-card:hover::before { opacity: 1; }
+
+        .service-card { 
+            position: relative; 
+            overflow: hidden; 
+        }
+
+        .animate-fade-in-up { animation: fade-in-up 0.8s ease-out; }
+        @keyframes fade-in-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-height { height: 60px; }
+            .nav-height .flex { height: 60px; }
+            .nav-height img { height: 40px; }
+        }
+        
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .spotlight-card::before { display: none; }
+            .spotlight-card:hover { transform: none; }
+        }
+        
+        * { -webkit-tap-highlight-color: transparent; }
+
+        /* Back to Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            z-index: 99;
+        }
+        
+        #backToTop:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
+        }
+        
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .light-mode #backToTop {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+    </style>
+</head>
+<body class="elegant-gradient font-sans text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect transition-all duration-300 nav-height" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <a href="../index.html">
+                        <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-20 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="../index.html" target="_blank" rel="noopener" aria-label="Home" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Home</a>
+                    <a href="../pages/aboutus.html" target="_blank" rel="noopener" aria-label="About Us" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">About</a>
+                    <a href="services.html" aria-label="Our Services" class="text-white hover:scale-105 font-medium transition-all">Services</a>
+                    <a href="../index.html#trends" target="_blank" rel="noopener" aria-label="Market Trends" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Trends</a>
+                    <a href="../index.html#careers" target="_blank" rel="noopener" aria-label="Career Opportunities" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Careers</a>
+                    <a href="team.html" target="_blank" rel="noopener" aria-label="Our Team" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Team</a>
+                    <a href="../index.html#gallery" target="_blank" rel="noopener" aria-label="Photo Gallery" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Gallery</a>
+                    <button id="theme-toggle" class="theme-toggle-btn bg-slate-800/40 text-white hover:bg-slate-700/50 transition px-3 py-2 rounded-lg" aria-label="Toggle theme" title="Toggle theme">
+                        <i id="theme-icon" class="ph ph-moon-stars text-xl"></i>
+                    </button>
+                    <a href="../index.html#contact" target="_blank" rel="noopener" class="bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all shadow-lg shadow-white/10">Contact Us</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-blue-400 focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="../index.html" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
+                <a href="../pages/aboutus.html" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="services.html" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-slate-800">Services</a>
+                <a href="../index.html#trends" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Trends</a>
+                <a href="../index.html#careers" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Careers</a>
+                <a href="team.html" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
+                <a href="../index.html#gallery" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                <a href="../index.html#contact" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-blue-400 hover:bg-slate-800">Contact Us</a>
+                <div class="pt-2">
+                    <button id="theme-toggle-mobile" class="w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800" aria-label="Toggle theme mobile">
+                        <i id="theme-icon-mobile" class="ph ph-moon-stars mr-2"></i> Toggle Theme
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section id="services" class="pt-32 pb-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-12 lg:mb-16" data-aos="fade-up">
+                <h2 class="text-sm sm:text-base text-blue-400 font-semibold tracking-wide uppercase">Our Expertise</h2>
+                <p class="mt-2 text-2xl sm:text-3xl leading-8 font-heading font-extrabold tracking-tight text-white lg:text-4xl">End-to-End Solutions</p>
+                <p class="mt-3 sm:mt-4 max-w-2xl text-base sm:text-lg lg:text-xl text-slate-400 mx-auto px-2">From software code to Amazon logistics, we cover it all.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 service-grid">
+                <div class="service-card spotlight-card bg-gradient-to-br from-blue-200 to-blue-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-600/50 border border-blue-300 group cursor-pointer hover:from-blue-500 hover:to-blue-600" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box w-14 h-14 bg-blue-400 rounded-xl shadow-inner flex items-center justify-center text-blue-900 text-2xl mb-6 transition-all duration-300 border border-blue-500 overflow-hidden group-hover:bg-blue-700 group-hover:text-white">
+                        <img src="../images/sd.png" alt="Software Development" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 group-hover:text-white">Software Development</h3>
+                    <p class="text-blue-800 group-hover:text-blue-100">Custom enterprise solutions, SaaS platforms, and scalable architecture designed for high performance.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-purple-200 to-purple-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-600/50 border border-purple-300 group cursor-pointer hover:from-purple-500 hover:to-purple-600" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box w-14 h-14 bg-purple-400 rounded-xl shadow-inner flex items-center justify-center text-purple-900 text-2xl mb-6 transition-all duration-300 border border-purple-500 overflow-hidden group-hover:bg-purple-700 group-hover:text-white">
+                        <img src="../images/Ecommerce.png" alt="E-commerce Management" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-900 mb-3 group-hover:text-white">E-commerce Management</h3>
+                    <p class="text-purple-800 group-hover:text-purple-100">End-to-end store management, inventory planning, and marketplace growth strategies.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-amber-200 to-yellow-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-600/50 border border-yellow-300 group cursor-pointer hover:from-amber-500 hover:to-yellow-600" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box w-14 h-14 bg-yellow-400 rounded-xl shadow-inner flex items-center justify-center text-yellow-900 text-2xl mb-6 transition-all duration-300 border border-yellow-500 overflow-hidden group-hover:bg-yellow-700 group-hover:text-white">
+                        <img src="../images/amazon.webp" alt="Amazon Selling & FBA" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-900 mb-3 group-hover:text-white">Amazon Selling & FBA</h3>
+                    <p class="text-yellow-800 group-hover:text-yellow-100">Specialized FBA strategies, listing optimization, PPC management, and brand registry support.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-cyan-200 to-cyan-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-600/50 border border-cyan-300 group cursor-pointer hover:from-cyan-500 hover:to-cyan-600" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-box w-14 h-14 bg-cyan-400 rounded-xl shadow-inner flex items-center justify-center text-cyan-900 text-2xl mb-6 transition-all duration-300 border border-cyan-500 overflow-hidden group-hover:bg-cyan-700 group-hover:text-white">
+                        <img src="../images/AI2.png" alt="Artificial Intelligence" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-cyan-900 mb-3 group-hover:text-white">Artificial Intelligence</h3>
+                    <p class="text-cyan-800 group-hover:text-cyan-100">Integrating ML models, data analysis, and automation tools to streamline your business operations.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-green-200 to-emerald-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-green-600/50 border border-green-300 group cursor-pointer hover:from-green-500 hover:to-emerald-600" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-box w-14 h-14 bg-green-400 rounded-xl shadow-inner flex items-center justify-center text-green-900 text-2xl mb-6 transition-all duration-300 border border-green-500 overflow-hidden group-hover:bg-green-700 group-hover:text-white">
+                        <img src="../images/Mobile.png" alt="Mobile App Dev" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-green-900 mb-3 group-hover:text-white">Mobile App Dev</h3>
+                    <p class="text-green-800 group-hover:text-green-100">Native and cross-platform mobile applications (iOS & Android) focusing on user experience.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-pink-200 to-pink-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-600/50 border border-pink-300 group cursor-pointer hover:from-pink-500 hover:to-pink-600" data-aos="fade-up" data-aos-delay="600">
+                    <div class="icon-box w-14 h-14 bg-pink-400 rounded-xl shadow-inner flex items-center justify-center text-pink-900 text-2xl mb-6 transition-all duration-300 border border-pink-500 overflow-hidden group-hover:bg-pink-700 group-hover:text-white">
+                        <img src="../images/Digital Marketing.png" alt="Digital Marketing" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-pink-900 mb-3 group-hover:text-white">Digital Marketing</h3>
+                    <p class="text-pink-800 group-hover:text-pink-100">SEO, Social Media Marketing, and Paid Advertising to boost your brand visibility and ROI.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-indigo-200 to-indigo-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-600/50 border border-indigo-300 group cursor-pointer hover:from-indigo-500 hover:to-indigo-600" data-aos="fade-up" data-aos-delay="700">
+                    <div class="icon-box w-14 h-14 bg-indigo-400 rounded-xl shadow-inner flex items-center justify-center text-indigo-900 text-2xl mb-6 transition-all duration-300 border border-indigo-500 overflow-hidden group-hover:bg-indigo-700 group-hover:text-white">
+                        <img src="../images/Graphics Design.png" alt="Graphics Design" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3 group-hover:text-white">Graphics Design</h3>
+                    <p class="text-indigo-800 group-hover:text-indigo-100">Creative UI/UX design, branding materials, and visual content that captures attention.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-rose-200 to-rose-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-rose-600/50 border border-rose-300 group cursor-pointer hover:from-rose-500 hover:to-rose-600" data-aos="fade-up" data-aos-delay="800">
+                    <div class="icon-box w-14 h-14 bg-rose-400 rounded-xl shadow-inner flex items-center justify-center text-rose-900 text-2xl mb-6 transition-all duration-300 border border-rose-500 overflow-hidden group-hover:bg-rose-700 group-hover:text-white">
+                        <img src="../images/Content Writing.png" alt="Content Writing" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-rose-900 mb-3 group-hover:text-white">Content Writing</h3>
+                    <p class="text-rose-800 group-hover:text-rose-100">SEO-optimized blogs, technical documentation, and compelling copy that drives engagement.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-orange-200 to-orange-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-600/50 border border-orange-300 group cursor-pointer hover:from-orange-500 hover:to-orange-600" data-aos="fade-up" data-aos-delay="900">
+                    <div class="icon-box w-14 h-14 bg-orange-400 rounded-xl shadow-inner flex items-center justify-center text-orange-900 text-2xl mb-6 transition-all duration-300 border border-orange-500 overflow-hidden group-hover:bg-orange-700 group-hover:text-white">
+                        <img src="../images/Logistics.png" alt="Logistics & Strategy" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-orange-900 mb-3 group-hover:text-white">Logistics & Strategy</h3>
+                    <p class="text-orange-800 group-hover:text-orange-100">Efficient delivery systems, fulfillment advice, and consultancy for scaling your operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top">
+        <i class="ph-bold ph-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black/40 backdrop-blur-xl text-white pt-12 sm:pt-16 pb-6 sm:pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
+                <div class="col-span-1 lg:col-span-1" data-aos="fade-up">
+                    <div class="flex items-center gap-2 mb-6 cursor-pointer" onclick="window.scrollTo(0,0)">
+                        <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-16 w-auto">
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Your partner for scaling globally on Amazon and optimizing digital commerce operations.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1CFhjbwtVv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                        <a href="https://www.linkedin.com/company/ontek-horizon/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><a href="../pages/aboutus.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="../index.html#trends" class="hover:text-primary transition-colors">Global Trends</a></li>
+                        <li><a href="../index.html#careers" class="hover:text-primary transition-colors">Careers & Internships</a></li>
+                        <li><a href="team.html" class="hover:text-primary transition-colors">Team Members</a></li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li>Software Development</li>
+                        <li>E-commerce Solutions</li>
+                        <li>Amazon FBA & PPC</li>
+                        <li>Digital Marketing</li>
+                        <li>Graphics Design</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="flex items-start gap-3"><i class="ph-fill ph-map-pin text-primary mt-1"></i><span>Level-5, Block-C, Silicon Tower,<br>Hi-Tech Park, Rajshahi, Bangladesh</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-phone text-primary"></i><span>+8801 343550533</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-envelope-simple text-primary"></i><span>asifiqbal.abir@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm text-center md:text-left">&copy; 2026 Ontek Horizon. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm text-slate-500">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ duration: 800, once: true });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const htmlElement = document.documentElement;
+
+        if (themeToggle && themeToggleMobile) {
+            [themeToggle, themeToggleMobile].forEach(btn => {
+                btn.addEventListener('click', () => {
+                    htmlElement.classList.toggle('light-mode');
+                    localStorage.setItem('theme', htmlElement.classList.contains('light-mode') ? 'light' : 'dark');
+                    updateThemeIcon();
+                });
+            });
+        }
+
+        function updateThemeIcon() {
+            const isDark = !htmlElement.classList.contains('light-mode');
+            document.getElementById('theme-icon').className = isDark ? 'ph ph-moon-stars text-xl' : 'ph ph-sun text-xl';
+            if (document.getElementById('theme-icon-mobile')) {
+                document.getElementById('theme-icon-mobile').className = isDark ? 'ph ph-moon-stars mr-2' : 'ph ph-sun mr-2';
+            }
+        }
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'light') {
+            htmlElement.classList.add('light-mode');
+        }
+        updateThemeIcon();
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Spotlight effect for service cards
+        document.querySelectorAll('.spotlight-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+                card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+            });
+        });
+    </script>
+</body>
+</html>
