@@ -38,15 +38,26 @@
     </script>
     <style>
         .glass-effect {
-            background: rgba(2, 6, 23, 0.7);
+            background: rgba(15, 5, 30, 0.85);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.15);
         }
         
         .elegant-gradient {
-            background: linear-gradient(135deg, #000000 0%, #1e1b4b 50%, #172554 100%);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 30%, #2d1b4e 60%, #1a0a2e 100%);
             background-attachment: fixed;
             transition: background 0.5s ease;
+        }
+
+        /* Dark mode card styles - Royal Purple */
+        .service-card, .spotlight-card {
+            background: linear-gradient(145deg, rgba(45, 27, 78, 0.6) 0%, rgba(26, 10, 46, 0.8) 100%) !important;
+            border: 1px solid rgba(139, 92, 246, 0.2) !important;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1) !important;
+        }
+        .service-card:hover, .spotlight-card:hover {
+            border-color: rgba(139, 92, 246, 0.4) !important;
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2) !important;
         }
 
         .light-mode, 
@@ -67,6 +78,7 @@
         }
 
         .light-mode .text-white { color: #000000 !important; font-weight: 700 !important; } 
+        .light-mode .hero-text { color: #ffffff !important; } 
         .light-mode .text-slate-300 { color: #374151 !important; font-weight: 500 !important; } 
         .light-mode .text-slate-400 { color: #4b5563 !important; font-weight: 500 !important; } 
         .light-mode .text-slate-500, .light-mode .text-slate-600 { color: #111827 !important; font-weight: 600 !important; }
@@ -122,7 +134,7 @@
         .light-mode .service-card:hover .icon-box { background-color: #2563eb !important; color: #ffffff !important; }
 
         .light-mode #mobile-menu { background-color: #ffffff !important; border-top: 1px solid #e5e7eb !important; }
-        .light-mode .text-transparent { background-image: linear-gradient(to right, #2563eb, #9333ea, #db2777) !important; }
+        .light-mode .text-transparent { background-image: linear-gradient(to right, #7c3aed, #c026d3, #db2777) !important; }
 
         .service-card { 
             position: relative; 
@@ -132,6 +144,31 @@
         }
         
         #globe-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; opacity: 0.6; }
+
+        /* Hero Background Image with Blur */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(.75px);
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
 
         /* Spotlight Effect */
         .spotlight-card::before {
@@ -663,10 +700,10 @@
                     <button id="theme-toggle" class="theme-toggle-btn bg-slate-800/40 text-white hover:bg-slate-700/50 transition" aria-label="Toggle theme" title="Toggle theme">
                         <i id="theme-icon" class="ph ph-moon-stars text-xl"></i>
                     </button>
-                    <a href="#contact" class="bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all shadow-lg shadow-white/10">Contact Us</a>
+                    <a href="#contact" class="bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold hover:bg-purple-50 transition-all shadow-lg shadow-white/10">Contact Us</a>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-blue-400 focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white hover:text-purple-400 focus:outline-none">
                         <i class="ph ph-list text-3xl"></i>
                     </button>
                 </div>
@@ -681,7 +718,7 @@
                 <a href="#events" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Events</a>
                 <a href="pages/team.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
                 <a href="#gallery" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
-                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-blue-400 hover:bg-slate-800">Contact Us</a>
+                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-purple-400 hover:bg-slate-800">Contact Us</a>
                 <div class="pt-2">
                     <button id="theme-toggle-mobile" class="w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800" aria-label="Toggle theme mobile">
                         <i id="theme-icon-mobile" class="ph ph-moon-stars mr-2"></i> Toggle Theme
@@ -691,22 +728,17 @@
         </div>
     </nav>
     <section class="relative pt-24 pb-16 md:pt-32 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-padding min-h-[90vh] md:min-h-[85vh] flex items-center">
-        <div id="globe-container"></div>
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600 rounded-full blur-[100px] opacity-10 animate-float-left-right will-change-transform"></div>
+        <div class="hero-bg">
+            <img src="images/cover2.jpg" alt="Hero Background">
+        </div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-purple-600 rounded-full blur-[100px] opacity-10 will-change-transform"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-4xl">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 text-blue-400 font-semibold text-sm mb-6 border border-slate-700 backdrop-blur-sm animate-fade-in-up">
-                    <span class="relative flex h-2 w-2">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                    </span>
-                    Scale Your Brand Globally
-                </div>
+            <div class="max-w-4xl pt-16 md:pt-20 lg:pt-24">
                 
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight hero-text">
                     Shaping the Future of <br class="hidden sm:block">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600">
                         <span id="typewriter-text"></span><span class="cursor">&nbsp;</span>
                     </span>
                 </h1>
@@ -715,7 +747,7 @@
                     Ontek Horizon is your strategic partner for Amazon growth, Software Development, and AI. We connect your business to the world.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <a href="#services" class="inline-flex justify-center items-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-full text-white bg-blue-600 hover:bg-yellow-400 hover:text-gray-900 transition-all shadow-lg shadow-blue-500/30 hover:shadow-yellow-400/50 active:scale-95">
+                    <a href="#services" class="inline-flex justify-center items-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-full text-white bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-purple-500/30 hover:shadow-purple-400/50 active:scale-95">
                         Explore Our Services
                         <i class="ph-bold ph-arrow-right ml-2"></i>
                     </a>
@@ -745,12 +777,12 @@
     <section class="py-20 bg-black/20 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-base text-blue-400 font-semibold tracking-wide uppercase">Our Impact</h2>
+                <h2 class="text-base text-purple-400 font-semibold tracking-wide uppercase">Our Impact</h2>
                 <h3 class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">Numbers That Speak</h3>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-                <div class="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
-                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-blue-400 mb-2" data-target="25">0</div>
+                <div class="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400 mb-2" data-target="25">0</div>
                     <p class="text-slate-400 text-sm sm:text-base">Projects Completed</p>
                 </div>
                 <div class="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
@@ -773,7 +805,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <div class="mb-10 lg:mb-0" data-aos="fade-right">
-                    <h2 class="text-base text-blue-400 font-semibold tracking-wide uppercase">Market Intelligence</h2>
+                    <h2 class="text-base text-purple-400 font-semibold tracking-wide uppercase">Market Intelligence</h2>
                     <h3 class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">
                         Stay Ahead of Global Trends
                     </h3>
@@ -782,19 +814,19 @@
                     </p>
                     <ul class="mt-8 space-y-4">
                         <li class="flex items-start" data-aos="fade-up" data-aos-delay="100">
-                            <i class="ph-fill ph-check-circle text-blue-500 mt-1 mr-3 text-xl"></i>
+                            <i class="ph-fill ph-check-circle text-purple-500 mt-1 mr-3 text-xl"></i>
                             <span class="text-slate-300">Updates on Amazon's global expansion</span>
                         </li>
                         <li class="flex items-start" data-aos="fade-up" data-aos-delay="200">
-                            <i class="ph-fill ph-check-circle text-blue-500 mt-1 mr-3 text-xl"></i>
+                            <i class="ph-fill ph-check-circle text-purple-500 mt-1 mr-3 text-xl"></i>
                             <span class="text-slate-300">New fulfillment centers and logistics upgrades</span>
                         </li>
                         <li class="flex items-start" data-aos="fade-up" data-aos-delay="300">
-                            <i class="ph-fill ph-check-circle text-blue-500 mt-1 mr-3 text-xl"></i>
+                            <i class="ph-fill ph-check-circle text-purple-500 mt-1 mr-3 text-xl"></i>
                             <span class="text-slate-300">Emerging international market entry</span>
                         </li>
                         <li class="flex items-start" data-aos="fade-up" data-aos-delay="400">
-                            <i class="ph-fill ph-check-circle text-blue-500 mt-1 mr-3 text-xl"></i>
+                            <i class="ph-fill ph-check-circle text-purple-500 mt-1 mr-3 text-xl"></i>
                             <span class="text-slate-300">Consumer behavior changes & Trend Analysis</span>
                         </li>
                     </ul>
@@ -807,7 +839,7 @@
                             Our Target Clients
                         </h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-blue-200 text-blue-800 group-hover:bg-blue-600 group-hover:text-white rounded-full text-sm font-medium border border-blue-300 group-hover:border-blue-600 transition-all">New Amazon Sellers</span>
+                            <span class="px-4 py-2 bg-purple-200 text-purple-800 group-hover:bg-purple-600 group-hover:text-white rounded-full text-sm font-medium border border-purple-300 group-hover:border-purple-600 transition-all">New Amazon Sellers</span>
                             <span class="px-4 py-2 bg-purple-200 text-purple-800 group-hover:bg-purple-600 group-hover:text-white rounded-full text-sm font-medium border border-purple-300 group-hover:border-purple-600 transition-all">SMEs</span>
                             <span class="px-4 py-2 bg-green-200 text-green-800 group-hover:bg-green-600 group-hover:text-white rounded-full text-sm font-medium border border-green-300 group-hover:border-green-600 transition-all">Global Brands</span>
                             <span class="px-4 py-2 bg-pink-200 text-pink-800 group-hover:bg-pink-600 group-hover:text-white rounded-full text-sm font-medium border border-pink-300 group-hover:border-pink-600 transition-all">Entrepreneurs</span>
@@ -826,7 +858,7 @@
     <section id="careers" class="py-20 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-base text-blue-400 font-semibold tracking-wide uppercase">Join Ontek Horizon</h2>
+                <h2 class="text-base text-purple-400 font-semibold tracking-wide uppercase">Join Ontek Horizon</h2>
                 <p class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">Grow Your Career With Us</p>
                 <p class="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">Whether you're starting your journey or looking to lead, we have a place for you.</p>
             </div>
@@ -887,9 +919,9 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-pink-900 mb-2 group-hover:text-white transition-colors">Job Fair 2026</h3>
-                        <p class="text-pink-700 text-sm mb-4 group-hover:text-white">Connect with top employers and explore career opportunities. Bring your resume and get hired on the spot!</p>
-                        <div class="flex items-center gap-4 text-sm text-pink-600 mb-4 group-hover:text-pink-100">
+                        <h3 class="text-xl font-bold text-white mb-2 transition-colors">Job Fair 2026</h3>
+                        <p class="text-white/90 text-sm mb-4">Connect with top employers and explore career opportunities. Bring your resume and get hired on the spot!</p>
+                        <div class="flex items-center gap-4 text-sm text-white/80 mb-4">
                             <span class="flex items-center gap-1"><i class="ph-fill ph-map-pin"></i> Rajshahi, Bangladesh</span>
                             <span class="flex items-center gap-1"><i class="ph-fill ph-clock"></i> 10:00 AM</span>
                         </div>
@@ -908,9 +940,9 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-white transition-colors">E-Commerce Seminar</h3>
-                        <p class="text-blue-700 text-sm mb-4 group-hover:text-white">Learn the latest strategies for scaling your Amazon business and maximizing ROI with expert insights.</p>
-                        <div class="flex items-center gap-4 text-sm text-blue-600 mb-4 group-hover:text-blue-100">
+                        <h3 class="text-xl font-bold text-white mb-2 transition-colors">E-Commerce Seminar</h3>
+                        <p class="text-white/90 text-sm mb-4">Learn the latest strategies for scaling your Amazon business and maximizing ROI with expert insights.</p>
+                        <div class="flex items-center gap-4 text-sm text-white/80 mb-4">
                             <span class="flex items-center gap-1"><i class="ph-fill ph-video-camera"></i> Online (Zoom)</span>
                             <span class="flex items-center gap-1"><i class="ph-fill ph-clock"></i> 7:00 PM</span>
                         </div>
@@ -929,9 +961,9 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-green-900 mb-2 group-hover:text-white transition-colors">Tech Workshop</h3>
-                        <p class="text-green-700 text-sm mb-4 group-hover:text-white">Hands-on workshop on AI integration and modern software development practices for beginners.</p>
-                        <div class="flex items-center gap-4 text-sm text-green-600 mb-4 group-hover:text-green-100">
+                        <h3 class="text-xl font-bold text-white mb-2 transition-colors">Tech Workshop</h3>
+                        <p class="text-white/90 text-sm mb-4">Hands-on workshop on AI integration and modern software development practices for beginners.</p>
+                        <div class="flex items-center gap-4 text-sm text-white/80 mb-4">
                             <span class="flex items-center gap-1"><i class="ph-fill ph-map-pin"></i> Silicon Tower, Rajshahi</span>
                             <span class="flex items-center gap-1"><i class="ph-fill ph-clock"></i> 3:00 PM</span>
                         </div>
@@ -949,7 +981,7 @@
     <section id="gallery" class="py-20 relative bg-black/20 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 sm:mb-12 lg:mb-16" data-aos="fade-up">
-                <h2 class="text-sm sm:text-base text-blue-400 font-semibold tracking-wide uppercase">Life at Ontek</h2>
+                <h2 class="text-sm sm:text-base text-purple-400 font-semibold tracking-wide uppercase">Life at Ontek</h2>
                 <p class="mt-2 text-2xl sm:text-3xl leading-8 font-heading font-extrabold text-white lg:text-4xl">Our Workspace & Culture</p>
                 <p class="mt-3 sm:mt-4 max-w-2xl text-base sm:text-lg lg:text-xl text-slate-400 mx-auto px-2">A glimpse into where innovation happens.</p>
             </div>
@@ -1042,7 +1074,7 @@
     <section class="py-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-base text-blue-400 font-semibold tracking-wide uppercase">FAQ</h2>
+                <h2 class="text-base text-purple-400 font-semibold tracking-wide uppercase">FAQ</h2>
                 <h3 class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">Frequently Asked Questions</h3>
                 <p class="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">Everything you need to know about working with Ontek Horizon.</p>
             </div>
@@ -1051,7 +1083,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3 class="text-lg font-semibold text-white">What services do you specialize in?</h3>
-                        <i class="ph-bold ph-plus text-blue-400 text-xl toggle-icon"></i>
+                        <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
@@ -1063,7 +1095,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3 class="text-lg font-semibold text-white">How long does a typical project take?</h3>
-                        <i class="ph-bold ph-plus text-blue-400 text-xl toggle-icon"></i>
+                        <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
@@ -1075,7 +1107,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3 class="text-lg font-semibold text-white">Do you work with international clients?</h3>
-                        <i class="ph-bold ph-plus text-blue-400 text-xl toggle-icon"></i>
+                        <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
@@ -1087,7 +1119,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3 class="text-lg font-semibold text-white">What makes Ontek Horizon different?</h3>
-                        <i class="ph-bold ph-plus text-blue-400 text-xl toggle-icon"></i>
+                        <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
@@ -1099,7 +1131,7 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3 class="text-lg font-semibold text-white">Do you offer ongoing support?</h3>
-                        <i class="ph-bold ph-plus text-blue-400 text-xl toggle-icon"></i>
+                        <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
@@ -1164,7 +1196,7 @@
         </div>
     </footer>
     <div id="lightbox" class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
-        <button class="absolute top-4 right-4 text-white text-4xl hover:text-blue-400 focus:outline-none">&times;</button>
+        <button class="absolute top-4 right-4 text-white text-4xl hover:text-purple-400 focus:outline-none">&times;</button>
         <img id="lightbox-img" src="" alt="Gallery Image" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
     </div>
     
