@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light-mode" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ontek Horizon - Our Workspace & Culture Gallery. A glimpse into where innovation happens.">
+    <meta name="keywords" content="Ontek Horizon, gallery, workspace, culture, team">
+    <meta name="author" content="Ontek Horizon">
+    <meta name="theme-color" content="#3B82F6">
+    <link rel="icon" href="../images/O.png" type="image/png">
+    <link rel="icon" href="../images/O.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/O.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="../images/O.png" sizes="180x180">
+    <link rel="shortcut icon" href="../images/O.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Gallery - Ontek Horizon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#0F172A',
+                        accent: '#A855F7',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel='stylesheet' href='../assets/styles.css'>
+    <link rel='stylesheet' href='../assets/css/gallery.css'>
+</head>
+<body class="elegant-gradient font-sans antialiased text-slate-300 min-h-screen">
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="logo-container">
+                <img src="../images/Ontek.png" alt="Ontek Horizon" class="preloader-logo logo-gray">
+                <img src="../images/Ontek.png" alt="Ontek Horizon" class="preloader-logo logo-fill">
+            </div>
+        </div>
+    </div>
+    
+    <nav class="fixed w-full z-50 glass-effect transition-all duration-300 nav-height" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <a href="../index.html">
+                        <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-12 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="../index.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Home</a>
+                    <a href="aboutus.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">About</a>
+                    <a href="services.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Services</a>
+                    <a href="careers.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Careers</a>
+                    <a href="team.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Team</a>
+                    <a href="gallery.html" class="text-purple-400 hover:text-purple-300 hover:scale-105 font-medium transition-all">Gallery</a>
+                    <a href="../index.html#contact" class="contact-btn px-4 py-2 md:px-5 md:py-2.5 rounded-lg font-semibold text-sm md:text-base transition-all">Contact Us</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-purple-400 focus:outline-none">
+                        <i class="ph ph-list text-3xl menu-icon"></i>
+                        <i class="ph ph-x text-3xl menu-close-icon hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="../index.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
+                <a href="aboutus.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="services.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Services</a>
+                <a href="careers.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Careers</a>
+                <a href="team.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
+                <a href="gallery.html" class="block px-3 py-3 rounded-md text-base font-medium text-purple-400 hover:bg-slate-800">Gallery</a>
+                <a href="../index.html#contact" class="block px-3 py-3 rounded-md text-base font-medium text-purple-400 hover:bg-slate-800">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="pt-32 pb-12 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-sm sm:text-base text-purple-400 font-semibold tracking-wide uppercase">Life at Ontek</h2>
+                <h1 class="mt-2 text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white">Our Workspace & Culture</h1>
+                <p class="mt-4 max-w-2xl text-lg lg:text-xl text-slate-400 mx-auto">A glimpse into where innovation happens. Explore our vibrant workspace, team moments, and the culture that drives us.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active px-6 py-2 rounded-full border border-purple-500/30 text-sm font-medium" data-filter="all">All Photos</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-purple-500/30 text-sm font-medium text-slate-300" data-filter="workspace">Workspace</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-purple-500/30 text-sm font-medium text-slate-300" data-filter="events">Events & Outings</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-12 relative bg-black/20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 gallery-grid" id="gallery-container">
+                
+                
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="100" data-category="workspace" onclick="openLightbox(this)">
+                    <img src="../images/image1.jpg" alt="Workspace View 1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Our Creative Space</p>
+                        <p class="text-slate-300 text-sm">Where ideas come to life</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="150" data-category="workspace" onclick="openLightbox(this)">
+                    <img src="../images/image.png" alt="Workspace View 2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Collaborative Environment</p>
+                        <p class="text-slate-300 text-sm">Teamwork at its best</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="200" data-category="workspace" onclick="openLightbox(this)">
+                    <img src="../images/image2.jpg" alt="Workspace View 3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Innovation Hub</p>
+                        <p class="text-slate-300 text-sm">Building the future</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="250" data-category="workspace" onclick="openLightbox(this)">
+                    <img src="../images/image3.jpg" alt="Workspace View 4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Work Station</p>
+                        <p class="text-slate-300 text-sm">Modern tech setup</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="300" data-category="workspace" onclick="openLightbox(this)">
+                    <img src="../images/image4.jpg" alt="Workspace View 5" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Office Vibes</p>
+                        <p class="text-slate-300 text-sm">Where magic happens</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+                
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="350" data-category="team" onclick="openLightbox(this)">
+                    <img src="../images/Bahir.jpeg" alt="Team Member" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Team Spirit</p>
+                        <p class="text-slate-300 text-sm">Our amazing people</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+                
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="500" data-category="events" onclick="openLightbox(this)">
+                    <img src="../images/Outing.jpeg" alt="Team Outing 1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Team Outing</p>
+                        <p class="text-slate-300 text-sm">Fun times together</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="550" data-category="events" onclick="openLightbox(this)">
+                    <img src="../images/Outing2.jpeg" alt="Team Outing 2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Adventure Day</p>
+                        <p class="text-slate-300 text-sm">Exploring new places</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="600" data-category="events" onclick="openLightbox(this)">
+                    <img src="../images/khanadana.jpeg" alt="Team Event" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Team Bonding</p>
+                        <p class="text-slate-300 text-sm">Celebrating together</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-56 sm:h-64 md:h-72 border border-slate-800" data-aos="fade-up" data-aos-delay="650" data-category="workspace" onclick="openLightbox(this)">
+                    <img src="../images/photo gallery.jpg" alt="Photo Gallery" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                        <p class="text-white font-semibold">Memories</p>
+                        <p class="text-slate-300 text-sm">Capturing moments</p>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ph-bold ph-magnifying-glass-plus text-2xl text-white bg-purple-600/80 p-2 rounded-full"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm sm:text-base text-purple-400 font-semibold tracking-wide uppercase">Our Values</h2>
+                <h3 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-white">What Drives Our Culture</h3>
+                <p class="mt-4 max-w-2xl text-lg text-slate-400 mx-auto">The principles that guide us every day.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="culture-card bg-gradient-to-br from-purple-900/40 to-slate-900/60 p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <div class="w-14 h-14 bg-purple-600/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ph-bold ph-lightbulb text-3xl text-purple-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Innovation</h4>
+                    <p class="text-slate-400">We constantly push boundaries and embrace new technologies to stay ahead.</p>
+                </div>
+
+                <div class="culture-card bg-gradient-to-br from-blue-900/40 to-slate-900/60 p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-all">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ph-bold ph-users-three text-3xl text-blue-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Collaboration</h4>
+                    <p class="text-slate-400">Together we achieve more. Our success is built on teamwork and mutual support.</p>
+                </div>
+
+                <div class="culture-card bg-gradient-to-br from-green-900/40 to-slate-900/60 p-6 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all">
+                    <div class="w-14 h-14 bg-green-600/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ph-bold ph-rocket-launch text-3xl text-green-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Growth</h4>
+                    <p class="text-slate-400">We invest in personal and professional development of every team member.</p>
+                </div>
+
+                <div class="culture-card bg-gradient-to-br from-pink-900/40 to-slate-900/60 p-6 rounded-xl border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <div class="w-14 h-14 bg-pink-600/20 rounded-xl flex items-center justify-center mb-4">
+                        <i class="ph-bold ph-heart text-3xl text-pink-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Passion</h4>
+                    <p class="text-slate-400">We love what we do, and it shows in every project we deliver.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="cta-section py-16 bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-y border-purple-500/20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h3 class="text-2xl sm:text-3xl font-heading font-bold text-white mb-4">Want to Be Part of Our Story?</h3>
+            <p class="text-lg text-slate-300 mb-8">Join our amazing team and help shape the future of digital innovation.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../index.html#careers" class="inline-flex justify-center items-center px-8 py-3 text-base font-semibold rounded-full text-white bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-purple-500/30">
+                    View Open Positions
+                </a>
+                <a href="../index.html#contact" class="inline-flex justify-center items-center px-8 py-3 text-base font-semibold rounded-full text-white border border-white/30 hover:bg-white/10 transition-all">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer id="contact" class="bg-black/40 backdrop-blur-xl text-white pt-12 sm:pt-16 pb-6 sm:pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
+                <div class="col-span-1 lg:col-span-1" data-aos="fade-up">
+                    <div class="flex items-center gap-2 mb-6 cursor-pointer" onclick="window.scrollTo(0,0)">
+                        <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-16 w-auto">
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Your partner for scaling globally on Amazon and optimizing digital commerce operations.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1CFhjbwtVv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-twitter-logo text-2xl"></i></a>
+                        <a href="https://www.linkedin.com/company/ontek-horizon/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><a href="aboutus.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="careers.html" class="hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="team.html" class="hover:text-primary transition-colors">Team Members</a></li>
+                        <li><a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li>Software Development</li>
+                        <li>E-commerce Solutions</li>
+                        <li>Amazon FBA & PPC</li>
+                        <li>Digital Marketing</li>
+                        <li>Graphics Design</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="flex items-start gap-3"><i class="ph-fill ph-map-pin text-primary mt-1"></i><span>Level-5, Block-C, Silicon Tower,<br>Hi-Tech Park, Rajshahi, Bangladesh</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-phone text-primary"></i><span>+8801717-187955</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-envelope-simple text-primary"></i><span>asifiqbal.abir@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm text-center md:text-left">&copy; 2026 Ontek Horizon. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm text-slate-500">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)"><i class="ph-bold ph-caret-left"></i></span>
+        <img src="" alt="Lightbox Image" id="lightbox-img">
+        <span class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)"><i class="ph-bold ph-caret-right"></i></span>
+    </div>
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../scripts/gallery.js" defer></script>
+    <script src="../scripts/preloader.js" defer></script>
+</body>
+</html>
+

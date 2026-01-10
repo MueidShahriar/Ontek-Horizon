@@ -1,0 +1,105 @@
+/* Selective paragraph text justify - for longer content only */
+.service-card p,
+.team-card p,
+.about-content p,
+.faq-answer p,
+.career-card p {
+  text-align: justify;
+}
+
+/* Footer paragraph - left aligned for better readability */
+footer p {
+  text-align: left !important;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #F1C40F, #E74C3C);
+  border-radius: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+nav a:hover::before {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* Ensure mobile menu links also get the effect */
+#mobile-menu a {
+  position: relative;
+}
+
+#mobile-menu a::before {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #F1C40F, #E74C3C);
+  transition: all 0.5s ease-in-out;
+}
+
+#mobile-menu a:hover::before {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* Global preloader styles (used by index.js to hide on load) */
+#preloader {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f3e8ff 50%, #ede9fe 100%);
+  z-index: 99999;
+}
+.preloader-inner { 
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.logo-container {
+  position: relative;
+  width: 180px;
+  height: auto;
+}
+.preloader-logo {
+  width: 180px;
+  height: auto;
+}
+.logo-gray {
+  filter: grayscale(100%) opacity(0.3);
+}
+.logo-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.1s linear;
+}
+#percent {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+@keyframes preloader-spin { to { transform: rotate(360deg); } }

@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light-mode">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Fair 2026 Registration - Ontek Horizon</title>
-    <link rel="icon" type="image/png" href="../../images/O.png">
+    <link rel="icon" href="../../images/O.png" type="image/png">
+    <link rel="icon" href="../../images/O.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../images/O.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="../../images/O.png" sizes="180x180">
+    <link rel="shortcut icon" href="../../images/O.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com">
@@ -31,146 +35,28 @@
             }
         }
     </script>
-    <style>
-        .glass-effect {
-            background: rgba(2, 6, 23, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .elegant-gradient {
-            /* Distinct gradient for Job Fair page */
-            background: linear-gradient(135deg, #0f0720 0%, #3a0ca3 50%, #f72585 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
-        }
-        /* Back to Top Button */
-        #backToTop {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-            z-index: 99;
-            padding: 0;
-            line-height: 1;
-        }
-        
-        #backToTop i {
-            display: inline-block;
-            font-size: 1.5rem;
-            width: 1.5rem;
-            height: 1.5rem;
-            line-height: 1.5rem;
-        }
-        
-        #backToTop:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
-        }
-        
-        #backToTop.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        #backToTop:active {
-            transform: translateY(0);
-        }
-        
-        .light-mode #backToTop {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        }
-        
-        .light-mode #backToTop:hover {
-            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
-        }
-        
-        @media (max-width: 768px) {
-            #backToTop {
-                width: 45px;
-                height: 45px;
-                bottom: 1.5rem;
-                right: 1.5rem;
-                font-size: 1.25rem;
-            }
-        }
-
-
-        /* Light Mode Overrides */
-        .light-mode, .light-mode body {
-            background-color: #ffffff !important;
-            background-image: none !important; 
-            color: #111827 !important;
-        }
-        .light-mode .elegant-gradient { background: #ffffff !important; }
-        .light-mode .glass-effect, .light-mode #navbar {
-            background: rgba(255, 255, 255, 0.98) !important;
-            border-bottom: 1px solid #e5e7eb !important;
-            color: #111827 !important;
-        }
-        .light-mode .text-white { color: #000000 !important; }
-        .light-mode .text-slate-300 { color: #4b5563 !important; }
-        .light-mode .text-slate-400 { color: #6b7280 !important; }
-        .light-mode input, .light-mode select, .light-mode textarea {
-            background-color: #f9fafb !important;
-            border-color: #d1d5db !important;
-            color: #111827 !important;
-        }
-        .light-mode .bg-slate-900\/50 { background-color: #f3f4f6 !important; border-color: #e5e7eb !important; }
-        .light-mode .bg-slate-900\/80 { 
-            background-color: #ffffff !important; 
-            border-color: #e5e7eb !important;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-        }
-        .light-mode nav a { color: #111827 !important; }
-
-        .theme-toggle-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.45rem; border-radius: 0.5rem; }
-        .light-mode .theme-toggle-btn { color: #111827; background: #e5e7eb; }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .lg\:grid-cols-7 { grid-template-columns: 1fr; }
-            .lg\:col-span-4, .lg\:col-span-3 { grid-column: span 1; }
-            main { padding-top: 5rem; padding-bottom: 3rem; }
-            .text-4xl { font-size: 1.75rem; }
-            .text-2xl { font-size: 1.25rem; }
-            .p-8 { padding: 1.25rem; }
-        }
-        @media (max-width: 480px) {
-            .md\:grid-cols-2 { grid-template-columns: 1fr; }
-            .px-4 { padding-left: 0.75rem; padding-right: 0.75rem; }
-        }
-        * { -webkit-tap-highlight-color: transparent; }
-    </style>
+    <!-- styles moved to ../../assets/css/jobfairregistration.css -->
+    <link rel='stylesheet' href='../../assets/styles.css'>
+    <link rel='stylesheet' href='../../assets/css/jobfairregistration.css'>
 </head>
 <body class="font-sans text-slate-300 antialiased elegant-gradient">
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="logo-container">
+                <img src="../../images/Ontek.png" alt="Ontek Horizon" class="preloader-logo logo-gray">
+                <img src="../../images/Ontek.png" alt="Ontek Horizon" class="preloader-logo logo-fill">
+            </div>
+        </div>
+    </div>
     <nav class="fixed w-full z-50 glass-effect transition-all duration-300 h-16 shadow-md" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div class="flex justify-between items-center h-full">
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="location.reload()">
-                    <img src="../../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-14 w-auto">
+                    <img src="../../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-16 w-auto">
                 </div>
 
                 <div class="flex items-center gap-4">
-                    <a href="../index.html" class="text-sm font-medium hover:text-white transition-colors">Back to Home</a>
-                    <button id="theme-toggle" class="theme-toggle-btn bg-slate-800/40 text-white hover:bg-slate-700/50 transition" aria-label="Toggle theme">
-                        <i id="theme-icon" class="ph ph-moon-stars text-xl"></i>
-                    </button>
+                    <a href="../../index.html" class="text-sm font-medium hover:text-white transition-colors">Back to Home</a>
                 </div>
             </div>
         </div>
@@ -337,120 +223,11 @@
         &copy; 2025 Ontek Horizon. All rights reserved.
     </footer>
     
-    <!-- Firebase SDK -->
+    
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
-    <script>
-        // Firebase Configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAK6D5o3ethosrnGHNmzAU70Hh8et3okik",
-            authDomain: "ontek-horizon.firebaseapp.com",
-            projectId: "ontek-horizon",
-            storageBucket: "ontek-horizon.firebasestorage.app",
-            messagingSenderId: "210494330142",
-            appId: "1:210494330142:web:09c86a149fdecfb391a50f",
-            measurementId: "G-K9YWTK029X",
-            databaseURL: "https://ontek-horizon-default-rtdb.firebaseio.com"
-        };
-        firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
-    </script>
-    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 400, once: true, offset: 50, easing: 'ease-out' });
-
-        // Form Handling with Firebase Realtime Database
-        document.getElementById('jobFairForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<i class="ph ph-spinner animate-spin text-xl"></i> Processing...';
-            btn.disabled = true;
-
-            // Collect form data
-            const selectedCategory = document.querySelector('input[name="category"]:checked');
-            const formData = {
-                fullname: document.getElementById('fullname').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                experience: document.getElementById('experience').value,
-                linkedin: document.getElementById('linkedin').value,
-                category: selectedCategory ? selectedCategory.value : '',
-                submittedAt: new Date().toISOString(),
-                type: 'job_fair'
-            };
-
-            try {
-                const newRef = database.ref('jobfair_registrations').push();
-                await newRef.set(formData);
-                btn.innerHTML = '<i class="ph-bold ph-check-circle text-xl"></i> Registered!';
-                btn.classList.remove('from-pink-600', 'to-purple-600');
-                btn.classList.add('bg-green-600');
-                
-                setTimeout(() => {
-                    alert("Registration Successful! Your Entry Pass has been emailed to you.");
-                    btn.disabled = false;
-                    btn.innerHTML = originalText;
-                    btn.classList.remove('bg-green-600');
-                    btn.classList.add('from-pink-600', 'to-purple-600');
-                    this.reset();
-                }, 1000);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Something went wrong. Please try again.');
-                btn.disabled = false;
-                btn.innerHTML = originalText;
-            }
-        });
-
-        // Theme Toggle (Shared Logic)
-        (function(){
-            const btn = document.getElementById('theme-toggle');
-            const icon = document.getElementById('theme-icon');
-
-            function setTheme(theme){
-                if(theme === 'light'){
-                    document.body.classList.add('light-mode');
-                    if(icon) icon.className = 'ph ph-sun text-xl';
-                } else {
-                    document.body.classList.remove('light-mode');
-                    if(icon) icon.className = 'ph ph-moon-stars text-xl';
-                }
-                try{ localStorage.setItem('ontek-theme', theme); }catch(e){}
-            }
-
-            let saved = null;
-            try{ saved = localStorage.getItem('ontek-theme'); }catch(e){}
-            if(!saved){ saved = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark'; }
-            setTheme(saved);
-
-            if(btn) btn.addEventListener('click', ()=> setTheme(document.body.classList.contains('light-mode') ? 'dark' : 'light'));
-
-        // Back to Top Button Functionality
-        const backToTopBtn = document.getElementById('backToTop');
-        
-        if (backToTopBtn) {
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopBtn.classList.add('show');
-                } else {
-                    backToTopBtn.classList.remove('show');
-                }
-            });
-        }
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        })();
-    </script>
-    <button id="backToTop" title="Back to top">
-        <i class="ph-solid ph-arrow-up"></i>
-    </button>
+    <script src="../../scripts/jobfairregistration.js" defer></script>
+    <script src="../../scripts/preloader.js" defer></script>
     </body>
 </html>

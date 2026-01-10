@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth" style="scroll-behavior: smooth;">
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light-mode" style="scroll-behavior: smooth;">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ontek Horizon - Digital Innovation & E-commerce Solutions. Strategic partner for Amazon growth, Software Development, and AI.">
+    <meta name="description"
+        content="Ontek Horizon - Digital Innovation & E-commerce Solutions. Strategic partner for Amazon growth, Software Development, and AI.">
     <meta name="keywords" content="e-commerce, software development, AI, Amazon FBA, digital marketing">
     <meta name="author" content="Ontek Horizon">
     <meta name="theme-color" content="#3B82F6">
-    <link rel="icon" type="image/png" href="images/O.png">
+    <link rel="icon" href="./images/O.png" type="image/png">
+    <link rel="icon" href="./images/O.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="./images/O.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="./images/O.png" sizes="180x180">
+    <link rel="shortcut icon" href="./images/O.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com">
@@ -17,7 +23,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -36,722 +44,88 @@
             }
         }
     </script>
-    <style>
-        .glass-effect {
-            background: rgba(15, 5, 30, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(139, 92, 246, 0.15);
-        }
-        
-        .elegant-gradient {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 30%, #2d1b4e 60%, #1a0a2e 100%);
-            background-attachment: fixed;
-            transition: background 0.5s ease;
-        }
-
-        /* Dark mode card styles - Royal Purple */
-        .service-card, .spotlight-card {
-            background: linear-gradient(145deg, rgba(45, 27, 78, 0.6) 0%, rgba(26, 10, 46, 0.8) 100%) !important;
-            border: 1px solid rgba(139, 92, 246, 0.2) !important;
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1) !important;
-        }
-        .service-card:hover, .spotlight-card:hover {
-            border-color: rgba(139, 92, 246, 0.4) !important;
-            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2) !important;
-        }
-
-        .light-mode, 
-        .light-mode body {
-            background-color: #ffffff !important;
-            background-image: none !important; 
-            color: #111827 !important;
-        }
-        
-        .light-mode .elegant-gradient { background: #ffffff !important; }
-
-        .light-mode .glass-effect,
-        .light-mode #navbar {
-            background: rgba(255, 255, 255, 0.98) !important;
-            border-bottom: 1px solid #e5e7eb !important;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-
-        .light-mode .text-white { color: #000000 !important; font-weight: 700 !important; } 
-        .light-mode .hero-text { color: #ffffff !important; } 
-        .light-mode .text-slate-300 { color: #374151 !important; font-weight: 500 !important; } 
-        .light-mode .text-slate-400 { color: #4b5563 !important; font-weight: 500 !important; } 
-        .light-mode .text-slate-500, .light-mode .text-slate-600 { color: #111827 !important; font-weight: 600 !important; }
-        .light-mode footer, .light-mode footer p, .light-mode footer a, .light-mode footer .text-slate-500 { color: #111827 !important; }
-
-        .light-mode .text-blue-400 { color: #2563eb !important; } 
-        .light-mode .text-purple-400 { color: #9333ea !important; } 
-        .light-mode .text-green-400 { color: #16a34a !important; } 
-        .light-mode .text-pink-400 { color: #db2777 !important; } 
-        .light-mode .text-blue-300 { color: #1d4ed8 !important; }
-        .light-mode .text-purple-300 { color: #7e22ce !important; }
-        .light-mode .text-green-300 { color: #15803d !important; }
-        .light-mode .text-pink-300 { color: #be185d !important; }
-        .light-mode nav a { color: #111827 !important; font-weight: 600 !important; }
-        .light-mode nav a:hover { color: #2563eb !important; }
-        
-        .light-mode .bg-slate-900, .light-mode .bg-slate-900\/40, .light-mode .bg-white\/5 {
-            background-color: #f9fafb !important; 
-            border: 1px solid #e5e7eb !important;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-        }
-        
-        .light-mode .bg-black\/20 {
-            background-color: #f3f4f6 !important; 
-            border-top: 1px solid #e5e7eb !important;
-            border-bottom: 1px solid #e5e7eb !important;
-        }
-
-        /* Light mode for Events section */
-        .light-mode #events {
-            background-color: #ffffff !important;
-        }
-        .light-mode #events .bg-slate-900\/60 {
-            background-color: #ffffff !important;
-            border: 1px solid #e5e7eb !important;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-        }
-
-        /* Light mode for Team Testimonials section */
-        .light-mode section.bg-black\/20 .bg-slate-900\/60 {
-            background-color: #ffffff !important;
-            border: 1px solid #e5e7eb !important;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-        }
-
-        .light-mode .border-slate-800, .light-mode .border-white\/10, .light-mode .border-white\/5 { border-color: #d1d5db !important; }
-        
-        .light-mode .icon-box {
-            background-color: #eff6ff !important; 
-            color: #2563eb !important; 
-            border-color: #bfdbfe !important; 
-        }
-        .light-mode .service-card:hover .icon-box { background-color: #2563eb !important; color: #ffffff !important; }
-
-        .light-mode #mobile-menu { background-color: #ffffff !important; border-top: 1px solid #e5e7eb !important; }
-        .light-mode .text-transparent { background-image: linear-gradient(to right, #7c3aed, #c026d3, #db2777) !important; }
-
-        .service-card { 
-            position: relative; 
-            overflow: hidden; 
-            transform-style: preserve-3d; /* Enable 3D transform */
-            perspective: 1000px;
-        }
-        
-        #globe-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; opacity: 0.6; }
-
-        /* Hero Background Image with Blur */
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-        .hero-bg img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: blur(.75px);
-        }
-        .hero-bg::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        /* Spotlight Effect */
-        .spotlight-card::before {
-            content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.08), transparent 40%);
-            z-index: 2; opacity: 0; transition: opacity 0.5s; pointer-events: none;
-        }
-        .light-mode .spotlight-card::before { background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(37, 99, 235, 0.1), transparent 40%); }
-        .spotlight-card:hover::before { opacity: 1; }
-
-        .cursor { display: inline-block; width: 3px; background-color: #3B82F6; animation: blink 1s infinite; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-
-        .animate-float-left-right { animation: float-left-right 7s ease-in-out infinite; }
-        .animate-fade-in-up { animation: fade-in-up 0.8s ease-out; }
-        .will-change-transform { will-change: transform; }
-        @keyframes float-left-right { 0%, 100% { transform: translateX(0px); } 50% { transform: translateX(15px); } }
-        @keyframes fade-in-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* Mobile Responsiveness Improvements */
-        @media (max-width: 1024px) {
-            .hero-text { font-size: 2.5rem !important; line-height: 1.2 !important; }
-            section { padding-top: 4rem; padding-bottom: 4rem; }
-        }
-        
-        @media (max-width: 768px) {
-            .about-carousel { height: 16rem; }
-            .nav-height { height: 60px; }
-            .nav-height .flex { height: 60px; }
-            .nav-height img { height: 40px; }
-            section { padding-top: 3rem; padding-bottom: 3rem; }
-            .hero-text { font-size: 2rem !important; line-height: 1.2 !important; }
-            .text-4xl, .sm\\:text-5xl { font-size: 1.875rem; line-height: 2.25rem; }
-            .text-5xl, .sm\\:text-6xl { font-size: 2.25rem; line-height: 2.5rem; }
-            .grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-            .service-card, .spotlight-card { padding: 1rem; }
-            .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .ticker-wrap { height: 2.5rem; }
-            .ticker-item { font-size: 0.85rem; padding: 0 1rem; }
-            .gallery-grid { gap: 0.75rem; }
-            .gallery-item { height: 12rem; }
-        }
-        
-        @media (max-width: 480px) {
-            .about-carousel { height: 12rem; }
-            .hero-text { font-size: 1.75rem !important; }
-            .text-3xl { font-size: 1.5rem; line-height: 2rem; }
-            .px-4 { padding-left: 0.75rem; padding-right: 0.75rem; }
-            .team-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-            .service-grid { gap: 1rem; }
-            .gallery-item { height: 10rem; }
-            .ticker-wrap { height: 2rem; }
-            .ticker-item { font-size: 0.75rem; padding: 0 0.75rem; }
-        }
-        
-        /* Touch device optimizations */
-        @media (hover: none) and (pointer: coarse) {
-            .spotlight-card::before { display: none; }
-            .service-card:hover, .spotlight-card:hover { transform: none; }
-        }
-        
-        * { -webkit-tap-highlight-color: transparent; }
-        img { content-visibility: auto; }
-        .elegant-gradient { contain: paint; }
-        /* Back to Top Button */
-        #backToTop {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-            z-index: 99;
-            padding: 0;
-            line-height: 1;
-        }
-        
-        #backToTop i {
-            display: inline-block;
-            font-size: 1.5rem;
-            width: 1.5rem;
-            height: 1.5rem;
-            line-height: 1.5rem;
-        }
-        
-        #backToTop:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
-        }
-        
-        #backToTop.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        #backToTop:active {
-            transform: translateY(0);
-        }
-        
-        .light-mode #backToTop {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        }
-        
-        .light-mode #backToTop:hover {
-            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
-        }
-        
-        @media (max-width: 768px) {
-            #backToTop {
-                width: 45px;
-                height: 45px;
-                bottom: 1.5rem;
-                right: 1.5rem;
-                font-size: 1.25rem;
-            }
-        }
-
-
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100vw;
-            height: 100vh;
-            background: linear-gradient(135deg, #000000 0%, #1e1b4b 50%, #172554 100%);
-            z-index: 99999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-        /* Fullscreen animated background particles */
-        #preloader::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 40%);
-            animation: bgFloat 8s ease-in-out infinite;
-            pointer-events: none;
-        }
-        @keyframes bgFloat {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(2%, 2%) rotate(2deg); }
-            50% { transform: translate(0, 4%) rotate(0deg); }
-            75% { transform: translate(-2%, 2%) rotate(-2deg); }
-        }
-        /* Animated lines */
-        #preloader::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(90deg, transparent 0%, transparent 50%, rgba(59, 130, 246, 0.03) 50%, transparent 51%),
-                linear-gradient(0deg, transparent 0%, transparent 50%, rgba(168, 85, 247, 0.03) 50%, transparent 51%);
-            background-size: 60px 60px;
-            animation: gridMove 20s linear infinite;
-            pointer-events: none;
-        }
-        @keyframes gridMove {
-            0% { background-position: 0 0; }
-            100% { background-position: 60px 60px; }
-        }
-        .light-mode #preloader { 
-            background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #eff6ff 100%) !important; 
-        }
-        .light-mode #preloader::before {
-            background: radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 40%, rgba(219, 39, 119, 0.08) 0%, transparent 40%);
-        }
-        
-        .preloader-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 10;
-        }
-        
-        .preloader-spinner {
-            width: 70px; height: 70px;
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            border-left: 4px solid #3B82F6;
-            border-top: 4px solid #A855F7;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-            margin-bottom: 25px;
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(168, 85, 247, 0.1);
-        }
-        .light-mode .preloader-spinner { 
-            border-color: #e5e7eb; 
-            border-left-color: #2563eb; 
-            border-top-color: #7c3aed;
-            box-shadow: 0 0 30px rgba(37, 99, 235, 0.2), inset 0 0 20px rgba(124, 58, 237, 0.1);
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        
-        /* Progress bar */
-        .preloader-progress {
-            position: absolute;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .light-mode .preloader-progress { background: rgba(0, 0, 0, 0.1); }
-        .preloader-progress-bar {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #3B82F6, #A855F7, #EC4899);
-            border-radius: 10px;
-            animation: progressFill 1.8s ease-out forwards;
-        }
-        @keyframes progressFill {
-            0% { width: 0%; }
-            50% { width: 70%; }
-            100% { width: 100%; }
-        }
-        
-        /* Unique Preloader Letter Animation */
-        .preloader-title {
-            display: flex;
-            gap: 0;
-            margin-top: 1.5rem;
-            perspective: 1000px;
-        }
-        .preloader-title .letter {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(50px) rotateX(-90deg);
-            animation: letterReveal 0.6s ease forwards;
-            background: linear-gradient(135deg, #3B82F6, #A855F7, #EC4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
-        }
-        .preloader-title .letter.space { width: 0.5rem; }
-        .light-mode .preloader-title .letter {
-            background: linear-gradient(135deg, #2563eb, #7c3aed, #db2777);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.4));
-        }
-        @keyframes letterReveal {
-            0% { opacity: 0; transform: translateY(50px) rotateX(-90deg) scale(0.5); }
-            50% { opacity: 0.5; transform: translateY(-10px) rotateX(20deg) scale(1.1); }
-            100% { opacity: 1; transform: translateY(0) rotateX(0) scale(1); }
-        }
-        /* Staggered delay for each letter */
-        .preloader-title .letter:nth-child(1) { animation-delay: 0.1s; }
-        .preloader-title .letter:nth-child(2) { animation-delay: 0.15s; }
-        .preloader-title .letter:nth-child(3) { animation-delay: 0.2s; }
-        .preloader-title .letter:nth-child(4) { animation-delay: 0.25s; }
-        .preloader-title .letter:nth-child(5) { animation-delay: 0.3s; }
-        .preloader-title .letter:nth-child(6) { animation-delay: 0.4s; }
-        .preloader-title .letter:nth-child(7) { animation-delay: 0.45s; }
-        .preloader-title .letter:nth-child(8) { animation-delay: 0.5s; }
-        .preloader-title .letter:nth-child(9) { animation-delay: 0.55s; }
-        .preloader-title .letter:nth-child(10) { animation-delay: 0.6s; }
-        .preloader-title .letter:nth-child(11) { animation-delay: 0.65s; }
-        .preloader-title .letter:nth-child(12) { animation-delay: 0.7s; }
-        .preloader-title .letter:nth-child(13) { animation-delay: 0.75s; }
-        
-        /* Glow pulse after reveal */
-        .preloader-title .letter {
-            animation: letterReveal 0.6s ease forwards, glowPulse 1.5s ease-in-out infinite 1s;
-        }
-        @keyframes glowPulse {
-            0%, 100% { filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5)); }
-            50% { filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.8)) drop-shadow(0 0 40px rgba(236, 72, 153, 0.6)); }
-        }
-        
-        .preloader-subtitle {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.6);
-            margin-top: 1rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0;
-            animation: subtitleFade 0.5s ease forwards 1s;
-        }
-        .light-mode .preloader-subtitle { color: rgba(0, 0, 0, 0.5); }
-        @keyframes subtitleFade {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        .preloader-subtitle span {
-            display: inline-block;
-            animation: dotBounce 1.4s ease-in-out infinite 1.2s;
-        }
-        .preloader-subtitle span:nth-child(2) { animation-delay: 1.3s; }
-        .preloader-subtitle span:nth-child(3) { animation-delay: 1.4s; }
-        @keyframes dotBounce {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-5px); }
-        }
-        .preloader-logo {
-            animation: none;
-            opacity: 1;
-        }
-        /* Animations removed to keep logo stable */
-
-        /* About Section Carousel */
-        .about-carousel {
-            position: relative;
-            width: 100%;
-            height: 24rem;
-            overflow: hidden;
-            border-radius: 1rem;
-        }
-        .about-carousel .carousel-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .about-carousel .carousel-slide.active {
-            opacity: 1;
-        }
-        .about-carousel .carousel-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .carousel-dots {
-            position: absolute;
-            bottom: 1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 0.5rem;
-            z-index: 10;
-        }
-        .carousel-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .carousel-dot.active {
-            background: #3B82F6;
-            transform: scale(1.2);
-        }
-
-        .accordion-item { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
-        .accordion-header { background: rgba(255, 255, 255, 0.05); padding: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background-color 0.3s; }
-        .light-mode .accordion-header { background: #f3f4f6 !important; }
-        .light-mode .accordion-header:hover { background: #e5e7eb !important; }
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(0, 0, 0, 0.2); }
-        .light-mode .accordion-content { background: #ffffff !important; color: #1f2937 !important; }
-        .accordion-content.open { max-height: 500px; }
-        .light-mode .accordion-body { color: #4b5563 !important; font-weight: 500; }
-
-        .timeline { position: relative; max-width: 1200px; margin: 0 auto; }
-        .timeline::after { content: ''; position: absolute; width: 6px; background: linear-gradient(to bottom, #3B82F6, #A855F7); top: 0; bottom: 0; left: 50%; margin-left: -3px; border-radius: 3px; }
-        .timeline-item { padding: 10px 40px; position: relative; background: inherit; width: 50%; margin-bottom: 20px; }
-        .timeline-item.left { left: 0; }
-        .timeline-item.right { left: 50%; }
-        .timeline-item::after { content: ''; position: absolute; width: 25px; height: 25px; right: -17px; background: #3B82F6; border: 4px solid #1e1b4b; top: 15px; border-radius: 50%; z-index: 1; }
-        .light-mode .timeline-item::after { border-color: #e5e7eb !important; background: #ffffff !important; }
-        .timeline-item.right::after { left: -16px; }
-        .timeline-content { padding: 20px 30px; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); }
-        
-        @media screen and (max-width: 768px) {
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
-            .timeline-item.left::after, .timeline-item.right::after { left: 15px; }
-            .timeline-item.right { left: 0%; }
-        }
-
-        .theme-toggle-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.45rem; border-radius: 0.5rem; }
-        .light-mode .theme-toggle-btn { color: #111827; background: #e5e7eb; }
-        .light-mode .theme-toggle-btn:hover { background: #d1d5db; }
-        
-        .light-mode footer { background-color: #ffffff !important; color: #0f1720 !important; border-top-color: #e5e7eb !important; backdrop-filter: none !important; }
-        .light-mode footer * { color: #0f1720 !important; }
-        .light-mode footer a:hover { color: #2563eb !important; }
-        .light-mode footer .bg-gradient-to-r { background: linear-gradient(90deg, #2563eb, #9333ea) !important; }
-        
-        .light-mode .inline-flex.bg-slate-800\/50.text-blue-400, .light-mode .inline-flex.bg-slate-800\/50.text-blue-400 * { color: #0f1720 !important; }
-
-        .light-mode #trends .relative.bg-slate-900\/80, .light-mode #trends .relative.bg-slate-900\/80 > * { background-color: #ffffff !important; color: #0f1720 !important; border-color: #e5e7eb !important; box-shadow: none !important; }
-        .light-mode #trends .relative.bg-slate-900\/80 a, .light-mode #trends .relative.bg-slate-900\/80 .text-slate-400, .light-mode #trends .relative.bg-slate-900\/80 .text-slate-300 { color: #374151 !important; }
-        .light-mode #trends .absolute.inset-0.bg-blue-600, .light-mode #trends .absolute.bg-blue-600 { background-color: #ffffff !important; opacity: 0.06 !important; filter: none !important; }
-
-        .ticker-wrap {
-            position: absolute; 
-            bottom: 0;          
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            height: 3.5rem; 
-            background: rgba(15, 23, 42, 0.6); 
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            z-index: 20; 
-            display: flex;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        }
-
-        .light-mode .ticker-wrap {
-            background: rgba(255, 255, 255, 0.85) !important;
-            border-top: 1px solid #e2e8f0 !important;
-            color: #0f172a !important;
-        }
-
-        .ticker {
-            display: flex;
-            white-space: nowrap;
-            animation: ticker 40s linear infinite;
-        }
-        
-        .ticker:hover {
-            animation-play-state: paused;
-            cursor: default;
-        }
-
-        .ticker-item {
-            display: inline-flex;
-            align-items: center;
-            padding: 0 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            color: #60a5fa; /* Blue 400 */
-            text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
-            text-shadow: 0 0 10px rgba(59, 130, 246, 0.3); /* Subtle Glow */
-        }
-        
-        .separator {
-            margin-left: 2rem;
-            color: #a855f7; /* Purple accent for star */
-            font-size: 0.8rem;
-            opacity: 0.8;
-        }
-
-        .light-mode .ticker-item {
-            color: #2563eb !important; /* Blue 600 */
-            text-shadow: none;
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } 
-        }
-        #scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #3B82F6, #A855F7, #EC4899);
-            z-index: 100;
-            width: 0%;
-            transition: width 0.1s ease-out;
-        }
-    </style>
+    <link rel='stylesheet' href='./assets/styles.css'>
+    <link rel='stylesheet' href='./assets/css/index.css'>
 </head>
-<body class="font-sans text-slate-300 antialiased elegant-gradient min-h-screen">
-    <!-- Scroll Progress Indicator -->
-    <div id="scroll-progress"></div>
-    
+<body class="font-sans text-slate-300 antialiased elegant-gradient" style="scroll-behavior: smooth;">
     <div id="preloader">
-        <div class="preloader-content">
-            <div class="preloader-spinner"></div>
-            <img src="images/Ontek.png" alt="Ontek Horizon Logo" class="h-24 w-auto preloader-logo">
-            <p class="preloader-subtitle">Loading<span>.</span><span>.</span><span>.</span></p>
-        </div>
-        <div class="preloader-progress">
-            <div class="preloader-progress-bar"></div>
+        <div class="preloader-inner">
+            <div class="logo-container">
+                <img src="./images/Ontek.png" alt="Ontek Horizon" class="preloader-logo logo-gray">
+                <img src="./images/Ontek.png" alt="Ontek Horizon" class="preloader-logo logo-fill">
+            </div>
         </div>
     </div>
 
     <nav class="fixed w-full z-50 glass-effect transition-all duration-300 nav-height" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="location.reload()">
-                    <img src="images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-20 w-auto">
-                </div>
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
+                    <img src="images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-12 w-auto">
+                </a>
                 <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
-                    <a href="pages/aboutus.html" aria-label="About Us" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">About</a>
-                    <a href="pages/services.html" aria-label="Our Services" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Services</a>
-                    <a href="#trends" aria-label="Market Trends" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Trends</a>
-                    <a href="#careers" aria-label="Career Opportunities" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Careers</a>
-                    <a href="#events" aria-label="Upcoming Events" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Events</a>
-                    <a href="pages/team.html" aria-label="Our Team" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Team</a>
-                    <a href="#gallery" aria-label="Photo Gallery" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Gallery</a>
-                    <button id="theme-toggle" class="theme-toggle-btn bg-slate-800/40 text-white hover:bg-slate-700/50 transition" aria-label="Toggle theme" title="Toggle theme">
-                        <i id="theme-icon" class="ph ph-moon-stars text-xl"></i>
-                    </button>
-                    <a href="#contact" class="bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold hover:bg-purple-50 transition-all shadow-lg shadow-white/10">Contact Us</a>
+                    <a href="index.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Home</a>
+                    <a href="pages/aboutus.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">About</a>
+                    <a href="pages/services.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Services</a>
+                    <a href="pages/careers.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Careers</a>
+                    <a href="pages/team.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Team</a>
+                    <a href="pages/gallery.html" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Gallery</a>
+                    <a href="#contact" class="contact-btn px-4 py-2 md:px-5 md:py-2.5 rounded-lg font-semibold text-sm md:text-base transition-all">Contact Us</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-white hover:text-purple-400 focus:outline-none">
-                        <i class="ph ph-list text-3xl"></i>
+                        <i class="ph ph-list text-3xl menu-icon"></i>
+                        <i class="ph ph-x text-3xl menu-close-icon hidden"></i>
                     </button>
                 </div>
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 absolute w-full shadow-xl">
             <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
                 <a href="pages/aboutus.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
                 <a href="pages/services.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Services</a>
-                <a href="#trends" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Trends</a>
-                <a href="#careers" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Careers</a>
-                <a href="#events" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Events</a>
+                <a href="pages/careers.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Careers</a>
                 <a href="pages/team.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
-                <a href="#gallery" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
-                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-purple-400 hover:bg-slate-800">Contact Us</a>
-                <div class="pt-2">
-                    <button id="theme-toggle-mobile" class="w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800" aria-label="Toggle theme mobile">
-                        <i id="theme-icon-mobile" class="ph ph-moon-stars mr-2"></i> Toggle Theme
-                    </button>
-                </div>
+                <a href="pages/gallery.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-blue-400 hover:bg-slate-800">Contact Us</a>
             </div>
         </div>
     </nav>
-    <section class="relative pt-24 pb-16 md:pt-32 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-padding min-h-[90vh] md:min-h-[85vh] flex items-center">
-        <div class="hero-bg">
-            <img src="images/cover2.jpg" alt="Hero Background">
+    <section
+        class="relative pt-24 pb-16 md:pt-32 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-padding min-h-[90vh] md:min-h-[85vh] flex items-center">
+        <div class="hero-bg hero-carousel">
+            <img src="images/cover2.jpg" alt="Hero Background" class="hero-slide active">
+            <img src="images/photo gallery.jpg" alt="Gallery" class="hero-slide">
+            <img src="images/image1.jpg" alt="Image 1" class="hero-slide">
         </div>
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-purple-600 rounded-full blur-[100px] opacity-10 will-change-transform"></div>
-        
+        <div
+            class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-purple-600 rounded-full blur-[100px] opacity-10 will-change-transform">
+        </div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-4xl pt-16 md:pt-20 lg:pt-24">
-                
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight hero-text">
+
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight hero-text">
                     Shaping the Future of <br class="hidden sm:block">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600">
-                        <span id="typewriter-text"></span><span class="cursor">&nbsp;</span>
-                    </span>
+                    <span id="typewriter-text" class="typewriter-colored"></span><span class="cursor">&nbsp;</span>
                 </h1>
 
-                <p class="text-base sm:text-lg md:text-xl text-slate-400 mb-6 md:mb-10 max-w-2xl leading-relaxed">
-                    Ontek Horizon is your strategic partner for Amazon growth, Software Development, and AI. We connect your business to the world.
+                <p class="text-base sm:text-lg md:text-xl text-white mb-6 md:mb-10 max-w-2xl leading-relaxed"
+                    style="color: #fff !important;">
+                    Ontek Horizon is your strategic partner for Amazon growth, Software Development and AI. We connect
+                    your business to the world.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <a href="#services" class="inline-flex justify-center items-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-full text-white bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-purple-500/30 hover:shadow-purple-400/50 active:scale-95">
+                    <a href="pages/services.html"
+                        class="explore-services-btn inline-flex justify-center items-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-full text-white transition-all shadow-lg active:scale-95">
                         Explore Our Services
                         <i class="ph-bold ph-arrow-right ml-2"></i>
                     </a>
-                    <a href="#contact" class="inline-flex justify-center items-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-full text-white bg-transparent border border-slate-600 hover:bg-white/10 transition-all backdrop-blur-sm active:scale-95">
+                    <a href="#contact"
+                        class="inline-flex justify-center items-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-full text-white bg-transparent border border-white/60 hover:bg-white/20 transition-all backdrop-blur-sm active:scale-95"
+                        style="color: #fff !important;">
                         Get Consulted
                     </a>
                 </div>
@@ -774,28 +148,146 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-black/20 border-y border-white/5">
+    <section id="about" class="py-20 bg-white border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-base text-purple-400 font-semibold tracking-wide uppercase">Our Impact</h2>
-                <h3 class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">Numbers That Speak</h3>
+                <h2 class="text-base text-purple-600 font-semibold tracking-wide uppercase">Our Impact</h2>
+                <h3 class="mt-2 text-3xl leading-8 font-heading font-extrabold text-gray-900 sm:text-4xl">Numbers That
+                    Speak</h3>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-                <div class="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
-                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400 mb-2" data-target="25">0</div>
-                    <p class="text-slate-400 text-sm sm:text-base">Projects Completed</p>
+                <div class="stats-card text-center p-4 sm:p-6 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-200 transition-all"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600 mb-2" data-target="25">
+                        0</div>
+                    <p class="text-gray-600 text-sm sm:text-base font-medium">Projects Completed</p>
                 </div>
-                <div class="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
-                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400 mb-2" data-target="98">0</div>
-                    <p class="text-slate-400 text-sm sm:text-base">Client Satisfaction</p>
+                <div class="stats-card text-center p-4 sm:p-6 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-200 transition-all"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-purple-600 mb-2"
+                        data-target="98">0</div>
+                    <p class="text-gray-600 text-sm sm:text-base font-medium">Client Satisfaction</p>
                 </div>
-                <div class="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-green-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
-                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-green-400 mb-2" data-target="50">0</div>
-                    <p class="text-slate-400 text-sm sm:text-base">Team Members</p>
+                <div class="stats-card text-center p-4 sm:p-6 rounded-xl bg-gradient-to-br from-green-50 to-green-100 border border-green-200 hover:border-green-500 hover:shadow-lg hover:shadow-green-200 transition-all"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-green-600 mb-2"
+                        data-target="50">0</div>
+                    <p class="text-gray-600 text-sm sm:text-base font-medium">Team Members</p>
                 </div>
-                <div class="text-center p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-pink-400/50 transition-all" data-aos="fade-up" data-aos-delay="400">
-                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-pink-400 mb-2" data-target="9">0</div>
-                    <p class="text-slate-400 text-sm sm:text-base">Countries Served</p>
+                <div class="stats-card text-center p-4 sm:p-6 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 border border-pink-200 hover:border-pink-500 hover:shadow-lg hover:shadow-pink-200 transition-all"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="counter text-3xl sm:text-4xl md:text-5xl font-bold text-pink-600 mb-2" data-target="9">0
+                    </div>
+                    <p class="text-gray-600 text-sm sm:text-base font-medium">Countries Served</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="services" class="pt-32 pb-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-12 lg:mb-16 mx-auto" data-aos="fade-up">
+                <h2 class="text-sm sm:text-base text-blue-400 font-semibold tracking-wide uppercase text-center">Our Expertise</h2>
+                <p
+                    class="mt-2 text-2xl sm:text-3xl leading-8 font-heading font-extrabold tracking-tight text-white lg:text-4xl text-center">
+                    End-to-End Solutions</p>
+                <p class="mt-3 sm:mt-4 max-w-2xl text-base sm:text-lg lg:text-xl text-slate-400 mx-auto px-2">From
+                    software code to Amazon logistics, we cover it all.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 service-grid">
+                <div class="service-card spotlight-card bg-gradient-to-br from-blue-200 to-blue-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-600/50 border border-blue-300 group cursor-pointer hover:from-blue-500 hover:to-blue-600"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="icon-box w-14 h-14 bg-blue-400 rounded-xl shadow-inner flex items-center justify-center text-blue-900 text-2xl mb-6 transition-all duration-300 border border-blue-500 overflow-hidden group-hover:bg-blue-700 group-hover:text-white">
+                        <img src="images/sd.png" alt="Software Development" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 group-hover:text-white">Software Development</h3>
+                    <p class="text-blue-800 group-hover:text-blue-100">Custom enterprise solutions, SaaS platforms, and
+                        scalable architecture designed for high performance.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-purple-200 to-purple-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-600/50 border border-purple-300 group cursor-pointer hover:from-purple-500 hover:to-purple-600"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="icon-box w-14 h-14 bg-purple-400 rounded-xl shadow-inner flex items-center justify-center text-purple-900 text-2xl mb-6 transition-all duration-300 border border-purple-500 overflow-hidden group-hover:bg-purple-700 group-hover:text-white">
+                        <img src="images/Ecommerce.png" alt="E-commerce Management" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-900 mb-3 group-hover:text-white">E-commerce Management</h3>
+                    <p class="text-purple-800 group-hover:text-purple-100">End-to-end store management, inventory
+                        planning, and marketplace growth strategies.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-amber-200 to-yellow-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-600/50 border border-yellow-300 group cursor-pointer hover:from-amber-500 hover:to-yellow-600"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="icon-box w-14 h-14 bg-yellow-400 rounded-xl shadow-inner flex items-center justify-center text-yellow-900 text-2xl mb-6 transition-all duration-300 border border-yellow-500 overflow-hidden group-hover:bg-yellow-700 group-hover:text-white">
+                        <img src="images/amazon.webp" alt="Amazon Selling & FBA" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-900 mb-3 group-hover:text-white">Amazon Selling & FBA</h3>
+                    <p class="text-yellow-800 group-hover:text-yellow-100">Specialized FBA strategies, listing
+                        optimization, PPC management, and brand registry support.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-cyan-200 to-cyan-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-600/50 border border-cyan-300 group cursor-pointer hover:from-cyan-500 hover:to-cyan-600"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="icon-box w-14 h-14 bg-cyan-400 rounded-xl shadow-inner flex items-center justify-center text-cyan-900 text-2xl mb-6 transition-all duration-300 border border-cyan-500 overflow-hidden group-hover:bg-cyan-700 group-hover:text-white">
+                        <img src="images/AI2.png" alt="Artificial Intelligence" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-cyan-900 mb-3 group-hover:text-white">Artificial Intelligence</h3>
+                    <p class="text-cyan-800 group-hover:text-cyan-100">Integrating ML models, data analysis, and
+                        automation tools to streamline your business operations.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-green-200 to-emerald-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-green-600/50 border border-green-300 group cursor-pointer hover:from-green-500 hover:to-emerald-600"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div
+                        class="icon-box w-14 h-14 bg-green-400 rounded-xl shadow-inner flex items-center justify-center text-green-900 text-2xl mb-6 transition-all duration-300 border border-green-500 overflow-hidden group-hover:bg-green-700 group-hover:text-white">
+                        <img src="images/Mobile.png" alt="Mobile App Dev" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-green-900 mb-3 group-hover:text-white">Mobile App Dev</h3>
+                    <p class="text-green-800 group-hover:text-green-100">Native and cross-platform mobile applications
+                        (iOS & Android) focusing on user experience.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-pink-200 to-pink-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-600/50 border border-pink-300 group cursor-pointer hover:from-pink-500 hover:to-pink-600"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <div
+                        class="icon-box w-14 h-14 bg-pink-400 rounded-xl shadow-inner flex items-center justify-center text-pink-900 text-2xl mb-6 transition-all duration-300 border border-pink-500 overflow-hidden group-hover:bg-pink-700 group-hover:text-white">
+                        <img src="images/Digital Marketing.png" alt="Digital Marketing"
+                            class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-pink-900 mb-3 group-hover:text-white">Digital Marketing</h3>
+                    <p class="text-pink-800 group-hover:text-pink-100">SEO, Social Media Marketing, and Paid Advertising
+                        to boost your brand visibility and ROI.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-indigo-200 to-indigo-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-600/50 border border-indigo-300 group cursor-pointer hover:from-indigo-500 hover:to-indigo-600"
+                    data-aos="fade-up" data-aos-delay="700">
+                    <div
+                        class="icon-box w-14 h-14 bg-indigo-400 rounded-xl shadow-inner flex items-center justify-center text-indigo-900 text-2xl mb-6 transition-all duration-300 border border-indigo-500 overflow-hidden group-hover:bg-indigo-700 group-hover:text-white">
+                        <img src="images/Graphics Design.png" alt="Graphics Design" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3 group-hover:text-white">Graphics Design</h3>
+                    <p class="text-indigo-800 group-hover:text-indigo-100">Creative UI/UX design, branding materials,
+                        and visual content that captures attention.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-rose-200 to-rose-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-rose-600/50 border border-rose-300 group cursor-pointer hover:from-rose-500 hover:to-rose-600"
+                    data-aos="fade-up" data-aos-delay="800">
+                    <div
+                        class="icon-box w-14 h-14 bg-rose-400 rounded-xl shadow-inner flex items-center justify-center text-rose-900 text-2xl mb-6 transition-all duration-300 border border-rose-500 overflow-hidden group-hover:bg-rose-700 group-hover:text-white">
+                        <img src="images/Content Writing.png" alt="Content Writing" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-rose-900 mb-3 group-hover:text-white">Content Writing</h3>
+                    <p class="text-rose-800 group-hover:text-rose-100">SEO-optimized blogs, technical documentation, and
+                        compelling copy that drives engagement.</p>
+                </div>
+                <div class="service-card spotlight-card bg-gradient-to-br from-orange-200 to-orange-300 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-600/50 border border-orange-300 group cursor-pointer hover:from-orange-500 hover:to-orange-600"
+                    data-aos="fade-up" data-aos-delay="900">
+                    <div
+                        class="icon-box w-14 h-14 bg-orange-400 rounded-xl shadow-inner flex items-center justify-center text-orange-900 text-2xl mb-6 transition-all duration-300 border border-orange-500 overflow-hidden group-hover:bg-orange-700 group-hover:text-white">
+                        <img src="images/Logistics.png" alt="Logistics & Strategy" class="w-10 h-10 object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold text-orange-900 mb-3 group-hover:text-white">Logistics & Strategy</h3>
+                    <p class="text-orange-800 group-hover:text-orange-100">Efficient delivery systems, fulfillment
+                        advice, and consultancy for scaling your operations.</p>
                 </div>
             </div>
         </div>
@@ -832,21 +324,33 @@
                     </ul>
                 </div>
                 <div class="relative" data-aos="fade-left">
-                     <div class="absolute inset-0 bg-gradient-to-br from-purple-300 to-pink-300 rounded-xl transform rotate-3 opacity-40 blur-lg"></div>
-                     <div class="relative bg-gradient-to-br from-purple-100 to-pink-100 backdrop-blur-xl rounded-xl p-8 border border-purple-300 shadow-2xl hover:from-purple-400 hover:to-pink-400 transition-all duration-300 group">
-                        <h3 class="text-xl font-bold text-purple-900 group-hover:text-white mb-6 flex items-center gap-2">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-300 to-pink-300 rounded-xl transform rotate-3 opacity-40 blur-lg">
+                    </div>
+                    <div
+                        class="relative bg-gradient-to-br from-purple-100 to-pink-100 backdrop-blur-xl rounded-xl p-8 border border-purple-300 shadow-2xl hover:from-purple-400 hover:to-pink-400 transition-all duration-300 group">
+                        <h3
+                            class="text-xl font-bold text-purple-900 group-hover:text-white mb-6 flex items-center gap-2">
                             <i class="ph-duotone ph-target text-purple-600 group-hover:text-white text-2xl"></i>
                             Our Target Clients
                         </h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-purple-200 text-purple-800 group-hover:bg-purple-600 group-hover:text-white rounded-full text-sm font-medium border border-purple-300 group-hover:border-purple-600 transition-all">New Amazon Sellers</span>
-                            <span class="px-4 py-2 bg-purple-200 text-purple-800 group-hover:bg-purple-600 group-hover:text-white rounded-full text-sm font-medium border border-purple-300 group-hover:border-purple-600 transition-all">SMEs</span>
-                            <span class="px-4 py-2 bg-green-200 text-green-800 group-hover:bg-green-600 group-hover:text-white rounded-full text-sm font-medium border border-green-300 group-hover:border-green-600 transition-all">Global Brands</span>
-                            <span class="px-4 py-2 bg-pink-200 text-pink-800 group-hover:bg-pink-600 group-hover:text-white rounded-full text-sm font-medium border border-pink-300 group-hover:border-pink-600 transition-all">Entrepreneurs</span>
+                            <span
+                                class="px-4 py-2 bg-purple-200 text-purple-800 group-hover:bg-purple-600 group-hover:text-white rounded-full text-sm font-medium border border-purple-300 group-hover:border-purple-600 transition-all">New
+                                Amazon Sellers</span>
+                            <span
+                                class="px-4 py-2 bg-purple-200 text-purple-800 group-hover:bg-purple-600 group-hover:text-white rounded-full text-sm font-medium border border-purple-300 group-hover:border-purple-600 transition-all">SMEs</span>
+                            <span
+                                class="px-4 py-2 bg-green-200 text-green-800 group-hover:bg-green-600 group-hover:text-white rounded-full text-sm font-medium border border-green-300 group-hover:border-green-600 transition-all">Global
+                                Brands</span>
+                            <span
+                                class="px-4 py-2 bg-pink-200 text-pink-800 group-hover:bg-pink-600 group-hover:text-white rounded-full text-sm font-medium border border-pink-300 group-hover:border-pink-600 transition-all">Entrepreneurs</span>
                         </div>
                         <div class="mt-8 pt-8 border-t border-purple-300 group-hover:border-purple-100">
-                            <p class="text-purple-700 group-hover:text-white text-sm mb-4">We provide strategic guidance and operational support to help businesses grow successfully.</p>
-                            <a href="#contact" class="inline-flex items-center text-purple-700 hover:text-white font-medium transition-colors">
+                            <p class="text-purple-700 group-hover:text-white text-sm mb-4">We provide strategic guidance
+                                and operational support to help businesses grow successfully.</p>
+                            <a href="#contact"
+                                class="inline-flex items-center text-purple-700 hover:text-white font-medium transition-colors">
                                 Get a consultation <i class="ph-bold ph-arrow-right ml-2"></i>
                             </a>
                         </div>
@@ -859,317 +363,324 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-base text-purple-400 font-semibold tracking-wide uppercase">Join Ontek Horizon</h2>
-                <p class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">Grow Your Career With Us</p>
-                <p class="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">Whether you're starting your journey or looking to lead, we have a place for you.</p>
+                <p class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">Grow Your Career
+                    With Us</p>
+                <p class="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">Whether you're starting your journey or looking
+                    to lead, we have a place for you.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-                <div class="bg-gradient-to-br from-green-100 to-emerald-200 backdrop-blur-md rounded-2xl p-4 sm:p-6 lg:p-8 border border-green-300 hover:border-green-700 hover:from-green-500 hover:to-emerald-600 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gradient-to-br from-green-100 to-emerald-200 backdrop-blur-md rounded-2xl p-4 sm:p-6 lg:p-8 border border-green-300 hover:border-green-700 hover:from-green-500 hover:to-emerald-600 transition-all group"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="flex justify-between items-start mb-6">
                         <div>
-                            <span class="inline-block px-3 py-1 bg-green-300 text-green-900 group-hover:bg-green-700 group-hover:text-white rounded-full text-xs font-bold uppercase tracking-wider mb-2 border border-green-400 group-hover:border-green-800 transition-all">Open Now</span>
+                            <span
+                                class="inline-block px-3 py-1 bg-green-300 text-green-900 group-hover:bg-green-700 group-hover:text-white rounded-full text-xs font-bold uppercase tracking-wider mb-2 border border-green-400 group-hover:border-green-800 transition-all">Open
+                                Now</span>
                             <h3 class="text-2xl font-bold text-green-900 group-hover:text-white">Internship Program</h3>
                         </div>
-                        <i class="ph-duotone ph-student text-4xl text-green-700 group-hover:text-white transition-colors"></i>
+                        <i
+                            class="ph-duotone ph-student text-4xl text-green-700 group-hover:text-white transition-colors"></i>
                     </div>
-                    <p class="text-green-800 group-hover:text-white mb-6">Gain hands-on experience in real-world projects. We offer mentorship in development, design, and marketing.</p>
+                    <p class="text-green-800 group-hover:text-white mb-6">Gain hands-on experience in real-world
+                        projects. We offer mentorship in development, design, and marketing.</p>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-green-200 rounded-lg text-sm text-green-800 group-hover:bg-green-700 group-hover:text-white border border-green-300 group-hover:border-green-800 transition-all">Paid & Unpaid Options</span>
-                        <span class="px-3 py-1 bg-green-200 rounded-lg text-sm text-green-800 group-hover:bg-green-700 group-hover:text-white border border-green-300 group-hover:border-green-800 transition-all">Remote / On-site</span>
-                        <span class="px-3 py-1 bg-green-200 rounded-lg text-sm text-green-800 group-hover:bg-green-700 group-hover:text-white border border-green-300 group-hover:border-green-800 transition-all">Certification</span>
+                        <span
+                            class="px-3 py-1 bg-green-200 rounded-lg text-sm text-green-800 group-hover:bg-green-700 group-hover:text-white border border-green-300 group-hover:border-green-800 transition-all">Paid
+                            & Unpaid Options</span>
+                        <span
+                            class="px-3 py-1 bg-green-200 rounded-lg text-sm text-green-800 group-hover:bg-green-700 group-hover:text-white border border-green-300 group-hover:border-green-800 transition-all">Remote
+                            / On-site</span>
+                        <span
+                            class="px-3 py-1 bg-green-200 rounded-lg text-sm text-green-800 group-hover:bg-green-700 group-hover:text-white border border-green-300 group-hover:border-green-800 transition-all">Certification</span>
                     </div>
-                    <a href="pages/careers/internship.html" class="block w-full py-3 rounded-lg bg-green-500 hover:bg-yellow-400 hover:text-gray-900 text-white font-semibold transition-colors shadow-lg shadow-green-600/30 hover:shadow-yellow-400/50 text-center">Apply for Internship</a>
+                    <a href="pages/careers/internship.html"
+                        class="block w-full py-3 rounded-lg bg-green-500 hover:bg-yellow-400 hover:text-gray-900 text-white font-semibold transition-colors shadow-lg shadow-green-600/30 hover:shadow-yellow-400/50 text-center">Apply
+                        for Internship</a>
                 </div>
-                <div class="bg-gradient-to-br from-purple-100 to-fuchsia-200 backdrop-blur-md rounded-2xl p-4 sm:p-6 lg:p-8 border border-purple-300 hover:border-purple-700 hover:from-purple-500 hover:to-fuchsia-600 transition-all group" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gradient-to-br from-purple-100 to-fuchsia-200 backdrop-blur-md rounded-2xl p-4 sm:p-6 lg:p-8 border border-purple-300 hover:border-purple-700 hover:from-purple-500 hover:to-fuchsia-600 transition-all group"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="flex justify-between items-start mb-6">
                         <div>
-                            <span class="inline-block px-3 py-1 bg-purple-300 text-purple-900 group-hover:bg-purple-700 group-hover:text-white rounded-full text-xs font-bold uppercase tracking-wider mb-2 border border-purple-400 group-hover:border-purple-800 transition-all">Hiring</span>
-                            <h3 class="text-2xl font-bold text-purple-900 group-hover:text-white">Full-Time Positions</h3>
+                            <span
+                                class="inline-block px-3 py-1 bg-purple-300 text-purple-900 group-hover:bg-purple-700 group-hover:text-white rounded-full text-xs font-bold uppercase tracking-wider mb-2 border border-purple-400 group-hover:border-purple-800 transition-all">Hiring</span>
+                            <h3 class="text-2xl font-bold text-purple-900 group-hover:text-white">Full-Time Positions
+                            </h3>
                         </div>
-                        <i class="ph-duotone ph-briefcase text-4xl text-purple-700 group-hover:text-white transition-colors"></i>
+                        <i
+                            class="ph-duotone ph-briefcase text-4xl text-purple-700 group-hover:text-white transition-colors"></i>
                     </div>
-                    <p class="text-purple-800 group-hover:text-white mb-6">We are looking for talented individuals to join our core team. Competitive salary, benefits, and growth opportunities.</p>
+                    <p class="text-purple-800 group-hover:text-white mb-6">We are looking for talented individuals to
+                        join our core team. Competitive salary, benefits, and growth opportunities.</p>
                     <div class="space-y-3 mb-6">
-                        <div class="flex items-center text-sm text-purple-800 group-hover:text-white"><i class="ph-bold ph-check text-green-600 group-hover:text-green-200 mr-2"></i> Senior React Developer</div>
-                        <div class="flex items-center text-sm text-purple-800 group-hover:text-white"><i class="ph-bold ph-check text-green-600 group-hover:text-green-200 mr-2"></i> Digital Marketing Specialist</div>
-                        <div class="flex items-center text-sm text-purple-800 group-hover:text-white"><i class="ph-bold ph-check text-green-600 group-hover:text-green-200 mr-2"></i> UI/UX Designer</div>
+                        <div class="flex items-center text-sm text-purple-800 group-hover:text-white"><i
+                                class="ph-bold ph-check text-green-600 group-hover:text-green-200 mr-2"></i> Senior
+                            React Developer</div>
+                        <div class="flex items-center text-sm text-purple-800 group-hover:text-white"><i
+                                class="ph-bold ph-check text-green-600 group-hover:text-green-200 mr-2"></i> Digital
+                            Marketing Specialist</div>
+                        <div class="flex items-center text-sm text-purple-800 group-hover:text-white"><i
+                                class="ph-bold ph-check text-green-600 group-hover:text-green-200 mr-2"></i> UI/UX
+                            Designer</div>
                     </div>
-                    <a href="pages/careers/jobapplication.html" class="block w-full py-3 rounded-lg bg-purple-500 hover:bg-yellow-400 hover:text-gray-900 text-white font-semibold transition-colors shadow-lg shadow-purple-600/30 hover:shadow-yellow-400/50 text-center">View Openings</a>
+                    <a href="pages/careers/jobapplication.html"
+                        class="block w-full py-3 rounded-lg bg-purple-500 hover:bg-yellow-400 hover:text-gray-900 text-white font-semibold transition-colors shadow-lg shadow-purple-600/30 hover:shadow-yellow-400/50 text-center">View
+                        Openings</a>
                 </div>
             </div>
         </div>
     </section>
-    <section id="events" class="py-20 bg-black/20 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-base text-pink-400 font-semibold tracking-wide uppercase">What's Coming</h2>
-                <p class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">Upcoming Events & Seminars</p>
-                <p class="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">Join us at our upcoming events, workshops, and seminars to learn and grow together.</p>
-            </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                <div class="bg-gradient-to-br from-pink-100 to-pink-200 backdrop-blur-md rounded-2xl overflow-hidden border border-pink-300 hover:border-pink-600 hover:from-pink-400 hover:to-purple-400 transition-all group spotlight-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative h-48 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-400 opacity-90"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="ph-fill ph-users-three text-6xl text-white/90"></i>
-                        </div>
-                        <div class="absolute top-4 left-4 bg-white text-slate-900 px-3 py-1 rounded-full text-xs font-bold uppercase">Upcoming</div>
-                        <div class="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-sm font-semibold">
-                            <i class="ph-fill ph-calendar mr-1"></i> Jan 15, 2026
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 transition-colors">Job Fair 2026</h3>
-                        <p class="text-white/90 text-sm mb-4">Connect with top employers and explore career opportunities. Bring your resume and get hired on the spot!</p>
-                        <div class="flex items-center gap-4 text-sm text-white/80 mb-4">
-                            <span class="flex items-center gap-1"><i class="ph-fill ph-map-pin"></i> Rajshahi, Bangladesh</span>
-                            <span class="flex items-center gap-1"><i class="ph-fill ph-clock"></i> 10:00 AM</span>
-                        </div>
-                        <a href="pages/events/jobfairregistration.html" class="block w-full py-2.5 rounded-lg bg-pink-300 text-pink-900 font-semibold border border-pink-400 hover:bg-yellow-400 hover:text-gray-900 transition-all text-center hover:border-yellow-400">Register Now</a>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-blue-100 to-cyan-200 backdrop-blur-md rounded-2xl overflow-hidden border border-blue-300 hover:border-blue-600 hover:from-blue-400 hover:to-cyan-400 transition-all group spotlight-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative h-48 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-400 opacity-90"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="ph-fill ph-presentation-chart text-6xl text-white/90"></i>
-                        </div>
-                        <div class="absolute top-4 left-4 bg-white text-slate-900 px-3 py-1 rounded-full text-xs font-bold uppercase">Upcoming</div>
-                        <div class="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-sm font-semibold">
-                            <i class="ph-fill ph-calendar mr-1"></i> Jan 22, 2026
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 transition-colors">E-Commerce Seminar</h3>
-                        <p class="text-white/90 text-sm mb-4">Learn the latest strategies for scaling your Amazon business and maximizing ROI with expert insights.</p>
-                        <div class="flex items-center gap-4 text-sm text-white/80 mb-4">
-                            <span class="flex items-center gap-1"><i class="ph-fill ph-video-camera"></i> Online (Zoom)</span>
-                            <span class="flex items-center gap-1"><i class="ph-fill ph-clock"></i> 7:00 PM</span>
-                        </div>
-                        <a href="pages/events/ecommerceseminar.html" class="block w-full py-2.5 rounded-lg bg-blue-300 text-blue-900 font-semibold border border-blue-400 hover:bg-yellow-400 hover:text-gray-900 transition-all text-center hover:border-yellow-400">Register Now</a>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-green-100 to-teal-200 backdrop-blur-md rounded-2xl overflow-hidden border border-green-300 hover:border-green-600 hover:from-green-400 hover:to-teal-400 transition-all group spotlight-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative h-48 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-teal-400 opacity-90"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <i class="ph-fill ph-code text-6xl text-white/90"></i>
-                        </div>
-                        <div class="absolute top-4 left-4 bg-white text-slate-900 px-3 py-1 rounded-full text-xs font-bold uppercase">Upcoming</div>
-                        <div class="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-sm font-semibold">
-                            <i class="ph-fill ph-calendar mr-1"></i> Feb 05, 2026
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 transition-colors">Tech Workshop</h3>
-                        <p class="text-white/90 text-sm mb-4">Hands-on workshop on AI integration and modern software development practices for beginners.</p>
-                        <div class="flex items-center gap-4 text-sm text-white/80 mb-4">
-                            <span class="flex items-center gap-1"><i class="ph-fill ph-map-pin"></i> Silicon Tower, Rajshahi</span>
-                            <span class="flex items-center gap-1"><i class="ph-fill ph-clock"></i> 3:00 PM</span>
-                        </div>
-                        <button class="w-full py-2.5 rounded-lg bg-green-300 text-green-900 font-semibold border border-green-400 hover:bg-yellow-400 hover:text-gray-900 transition-all hover:border-yellow-400">Register Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-12" data-aos="fade-up">
-                <a href="#" class="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-semibold transition-colors">
-                    View All Events <i class="ph-bold ph-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
     <section id="gallery" class="py-20 relative bg-black/20 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 sm:mb-12 lg:mb-16" data-aos="fade-up">
-                <h2 class="text-sm sm:text-base text-purple-400 font-semibold tracking-wide uppercase">Life at Ontek</h2>
-                <p class="mt-2 text-2xl sm:text-3xl leading-8 font-heading font-extrabold text-white lg:text-4xl">Our Workspace & Culture</p>
-                <p class="mt-3 sm:mt-4 max-w-2xl text-base sm:text-lg lg:text-xl text-slate-400 mx-auto px-2">A glimpse into where innovation happens.</p>
+                <h2 class="text-sm sm:text-base text-purple-400 font-semibold tracking-wide uppercase">Life at Ontek
+                </h2>
+                <p class="mt-2 text-2xl sm:text-3xl leading-8 font-heading font-extrabold text-white lg:text-4xl">Our
+                    Workspace & Culture</p>
+                <p class="mt-3 sm:mt-4 max-w-2xl text-base sm:text-lg lg:text-xl text-slate-400 mx-auto px-2">A glimpse
+                    into where innovation happens.</p>
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 gallery-grid">
-                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
-                    <img src="images/image1.jpg" alt="Gallery Image 1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800"
+                    data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                    <img src="images/image1.jpg" alt="Gallery Image 1" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <i class="ph-bold ph-magnifying-glass-plus text-3xl text-white"></i>
                     </div>
                 </div>
-                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
-                    <img src="images/image.png" alt="Gallery Image 2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800"
+                    data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                    <img src="images/image.png" alt="Gallery Image 2" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <i class="ph-bold ph-magnifying-glass-plus text-3xl text-white"></i>
                     </div>
                 </div>
-                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
-                    <img src="images/image2.jpg" alt="Gallery Image 3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800"
+                    data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
+                    <img src="images/image2.jpg" alt="Gallery Image 3" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <i class="ph-bold ph-magnifying-glass-plus text-3xl text-white"></i>
                     </div>
                 </div>
-                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
-                    <img src="images/image3.jpg" alt="Gallery Image 4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800"
+                    data-aos="fade-up" data-aos-delay="400" onclick="openLightbox(this)">
+                    <img src="images/image3.jpg" alt="Gallery Image 4" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <i class="ph-bold ph-magnifying-glass-plus text-3xl text-white"></i>
                     </div>
                 </div>
-                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800" data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
-                    <img src="images/image4.jpg" alt="Gallery Image 5" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800"
+                    data-aos="fade-up" data-aos-delay="500" onclick="openLightbox(this)">
+                    <img src="images/image4.jpg" alt="Gallery Image 5" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <i class="ph-bold ph-magnifying-glass-plus text-3xl text-white"></i>
                     </div>
                 </div>
-                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800" data-aos="fade-up" data-aos-delay="600" onclick="openLightbox(this)">
-                    <img src="images/Bahir.jpeg" alt="Gallery Image 6" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800"
+                    data-aos="fade-up" data-aos-delay="600" onclick="openLightbox(this)">
+                    <img src="images/Bahir.jpeg" alt="Gallery Image 6" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <i class="ph-bold ph-magnifying-glass-plus text-3xl text-white"></i>
                     </div>
                 </div>
-                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800" data-aos="fade-up" data-aos-delay="900" onclick="openLightbox(this)">
-                    <img src="images/Outing2.jpeg" alt="Gallery Image 7" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="gallery-item relative overflow-hidden rounded-xl cursor-pointer group h-48 sm:h-56 md:h-64 border border-slate-800"
+                    data-aos="fade-up" data-aos-delay="900" onclick="openLightbox(this)">
+                    <img src="images/Outing2.jpeg" alt="Gallery Image 7" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <i class="ph-bold ph-magnifying-glass-plus text-3xl text-white"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-20 bg-black/20 border-y border-white/5">
+    <section class="py-20 bg-gray-50 border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-base text-purple-400 font-semibold tracking-wide uppercase">Our Process</h2>
-                <h3 class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">How We Transform Ideas</h3>
-                <p class="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">A systematic approach to delivering exceptional results.</p>
+                <h2 class="text-base text-purple-600 font-semibold tracking-wide uppercase">Our Process</h2>
+                <h3 class="mt-2 text-3xl leading-8 font-heading font-extrabold text-gray-900 sm:text-4xl">How We Transform
+                    Ideas</h3>
+                <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">A systematic approach to delivering exceptional
+                    results.</p>
             </div>
 
             <div class="timeline">
                 <div class="timeline-item left" data-aos="fade-right">
-                    <div class="timeline-content bg-gradient-to-br from-blue-100 to-sky-200 border-blue-300 hover:from-blue-500 hover:to-sky-600 hover:border-blue-700 transition-all duration-300 group">
-                        <h3 class="text-xl font-bold text-blue-900 group-hover:text-white mb-2">Discovery & Analysis</h3>
-                        <p class="text-blue-800 group-hover:text-white">We dive deep into your business needs, market position, and growth objectives to create a comprehensive strategy.</p>
+                    <div
+                        class="timeline-content bg-gradient-to-br from-blue-100 to-sky-200 border-blue-300 hover:from-blue-500 hover:to-sky-600 hover:border-blue-700 transition-all duration-300 group">
+                        <h3 class="text-xl font-bold text-blue-900 group-hover:text-white mb-2">Discovery & Analysis
+                        </h3>
+                        <p class="text-blue-800 group-hover:text-white">We dive deep into your business needs, market
+                            position, and growth objectives to create a comprehensive strategy.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item right" data-aos="fade-left">
-                    <div class="timeline-content bg-gradient-to-br from-purple-100 to-fuchsia-200 border-purple-300 hover:from-purple-500 hover:to-fuchsia-600 hover:border-purple-700 transition-all duration-300 group">
-                        <h3 class="text-xl font-bold text-purple-900 group-hover:text-white mb-2">Strategic Planning</h3>
-                        <p class="text-purple-800 group-hover:text-white">Develop detailed roadmaps with clear milestones, timelines, and measurable success criteria.</p>
+                    <div
+                        class="timeline-content bg-gradient-to-br from-purple-100 to-fuchsia-200 border-purple-300 hover:from-purple-500 hover:to-fuchsia-600 hover:border-purple-700 transition-all duration-300 group">
+                        <h3 class="text-xl font-bold text-purple-900 group-hover:text-white mb-2">Strategic Planning
+                        </h3>
+                        <p class="text-purple-800 group-hover:text-white">Develop detailed roadmaps with clear
+                            milestones, timelines, and measurable success criteria.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item left" data-aos="fade-right">
-                    <div class="timeline-content bg-gradient-to-br from-green-100 to-emerald-200 border-green-300 hover:from-green-500 hover:to-emerald-600 hover:border-green-700 transition-all duration-300 group">
+                    <div
+                        class="timeline-content bg-gradient-to-br from-green-100 to-emerald-200 border-green-300 hover:from-green-500 hover:to-emerald-600 hover:border-green-700 transition-all duration-300 group">
                         <h3 class="text-xl font-bold text-green-900 group-hover:text-white mb-2">Implementation</h3>
-                        <p class="text-green-800 group-hover:text-white">Execute the plan with precision, utilizing our expertise in software development, e-commerce, and AI solutions.</p>
+                        <p class="text-green-800 group-hover:text-white">Execute the plan with precision, utilizing our
+                            expertise in software development, e-commerce, and AI solutions.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item right" data-aos="fade-left">
-                    <div class="timeline-content bg-gradient-to-br from-orange-100 to-amber-200 border-orange-300 hover:from-orange-500 hover:to-amber-600 hover:border-orange-700 transition-all duration-300 group">
-                        <h3 class="text-xl font-bold text-orange-900 group-hover:text-white mb-2">Optimization & Growth</h3>
-                        <p class="text-orange-800 group-hover:text-white">Continuous monitoring, performance optimization, and scaling strategies to maximize ROI.</p>
+                    <div
+                        class="timeline-content bg-gradient-to-br from-orange-100 to-amber-200 border-orange-300 hover:from-orange-500 hover:to-amber-600 hover:border-orange-700 transition-all duration-300 group">
+                        <h3 class="text-xl font-bold text-orange-900 group-hover:text-white mb-2">Optimization & Growth
+                        </h3>
+                        <p class="text-orange-800 group-hover:text-white">Continuous monitoring, performance
+                            optimization, and scaling strategies to maximize ROI.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-20">
+    <section class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-base text-purple-400 font-semibold tracking-wide uppercase">FAQ</h2>
-                <h3 class="mt-2 text-3xl leading-8 font-heading font-extrabold text-white sm:text-4xl">Frequently Asked Questions</h3>
-                <p class="mt-4 max-w-2xl text-xl text-slate-400 mx-auto">Everything you need to know about working with Ontek Horizon.</p>
+                <h3 class="mt-2 text-3xl leading-8 font-heading font-extrabold text-gray-900 sm:text-4xl">Frequently Asked
+                    Questions</h3>
+                <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">Everything you need to know about working with
+                    Ontek Horizon.</p>
             </div>
 
             <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h3 class="text-lg font-semibold text-white">What services do you specialize in?</h3>
+                        <h3 class="text-lg font-semibold">What services do you specialize in?</h3>
                         <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            We specialize in software development, e-commerce solutions, Amazon FBA management, AI integration, digital marketing, and comprehensive business consulting. Our expertise spans the entire digital commerce ecosystem.
+                            We specialize in software development, e-commerce solutions, Amazon FBA management, AI
+                            integration, digital marketing, and comprehensive business consulting. Our expertise spans
+                            the entire digital commerce ecosystem.
                         </div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h3 class="text-lg font-semibold text-white">How long does a typical project take?</h3>
+                        <h3 class="text-lg font-semibold">How long does a typical project take?</h3>
                         <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            Project timelines vary based on complexity and scope. Simple consulting projects may take 2-4 weeks, while full software development projects can range from 3-12 months. We'll provide a detailed timeline during our initial consultation.
+                            Project timelines vary based on complexity and scope. Simple consulting projects may take
+                            2-4 weeks, while full software development projects can range from 3-12 months. We'll
+                            provide a detailed timeline during our initial consultation.
                         </div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h3 class="text-lg font-semibold text-white">Do you work with international clients?</h3>
+                        <h3 class="text-lg font-semibold">Do you work with international clients?</h3>
                         <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            Absolutely! We serve clients across 25+ countries and have extensive experience with international e-commerce, cross-border Amazon selling, and global market expansion strategies.
+                            Absolutely! We serve clients across 25+ countries and have extensive experience with
+                            international e-commerce, cross-border Amazon selling, and global market expansion
+                            strategies.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item highlighted">
+                    <div class="accordion-header">
+                        <h3 class="text-lg font-semibold">What makes Ontek Horizon different?</h3>
+                        <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Our unique combination of technical expertise, business acumen, and hands-on experience in
+                            scaling e-commerce businesses sets us apart. We don't just deliver solutions—we partner with
+                            you for long-term success.
                         </div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h3 class="text-lg font-semibold text-white">What makes Ontek Horizon different?</h3>
+                        <h3 class="text-lg font-semibold">Do you offer ongoing support?</h3>
                         <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            Our unique combination of technical expertise, business acumen, and hands-on experience in scaling e-commerce businesses sets us apart. We don't just deliver solutions—we partner with you for long-term success.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3 class="text-lg font-semibold text-white">Do you offer ongoing support?</h3>
-                        <i class="ph-bold ph-plus text-purple-400 text-xl toggle-icon"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            Yes, we provide comprehensive ongoing support including maintenance, performance monitoring, updates, and strategic consulting to ensure your digital assets continue to drive growth.
+                            Yes, we provide comprehensive ongoing support including maintenance, performance monitoring,
+                            updates, and strategic consulting to ensure your digital assets continue to drive growth.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer id="contact" class="bg-black/40 backdrop-blur-xl text-white pt-12 sm:pt-16 pb-6 sm:pb-8 border-t border-slate-800">
+    <footer id="contact"
+        class="bg-white text-gray-800 pt-12 sm:pt-16 pb-6 sm:pb-8 border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
                 <div class="col-span-1 lg:col-span-1" data-aos="fade-up">
                     <div class="flex items-center gap-2 mb-6 cursor-pointer" onclick="window.scrollTo(0,0)">
-                        <img src="images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-16 w-auto">
+                        <img src="images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'"
+                            alt="Ontek Horizon Logo" class="h-16 w-auto">
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Your partner for scaling globally on Amazon and optimizing digital commerce operations.</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Your partner for scaling globally on Amazon
+                        and optimizing digital commerce operations.</p>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/share/1CFhjbwtVv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-twitter-logo text-2xl"></i></a>
-                        <a href="https://www.linkedin.com/company/ontek-horizon/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                        <a href="https://www.facebook.com/share/1CFhjbwtVv/?mibextid=wwXIfr" target="_blank"
+                            rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors"><i
+                                class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-blue-400 transition-colors"><i
+                                class="ph-fill ph-twitter-logo text-2xl"></i></a>
+                        <a href="https://www.linkedin.com/company/ontek-horizon/" target="_blank"
+                            rel="noopener noreferrer" class="text-gray-600 hover:text-blue-700 transition-colors"><i
+                                class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-pink-600 transition-colors"><i
+                                class="ph-fill ph-instagram-logo text-2xl"></i></a>
                     </div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
-                    <ul class="space-y-3 text-slate-400 text-sm">
-                        <li><a href="#about" class="hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="#services" class="hover:text-primary transition-colors">Our Services</a></li>
-                        <li><a href="#trends" class="hover:text-primary transition-colors">Global Trends</a></li>
-                        <li><a href="#careers" class="hover:text-primary transition-colors">Careers & Internships</a></li>
-                        <li><a href="#team" class="hover:text-primary transition-colors">Team Members</a></li>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-6">Quick Links</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li><a href="pages/aboutus.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="pages/services.html" class="hover:text-primary transition-colors">Our Services</a>
+                        </li>
+                        <li><a href="pages/careers.html" class="hover:text-primary transition-colors">Careers &
+                                Internships</a></li>
+                        <li><a href="pages/team.html" class="hover:text-primary transition-colors">Team Members</a></li>
+                        <li><a href="pages/gallery.html" class="hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-lg font-semibold mb-6">Services</h3>
-                    <ul class="space-y-3 text-slate-400 text-sm">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-6">Services</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm">
                         <li>Software Development</li>
                         <li>E-commerce Solutions</li>
                         <li>Amazon FBA & PPC</li>
@@ -1178,356 +689,41 @@
                     </ul>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
-                    <ul class="space-y-4 text-slate-400 text-sm">
-                        <li class="flex items-start gap-3"><i class="ph-fill ph-map-pin text-primary mt-1"></i><span>Level-5, Block-C, Silicon Tower,<br>Hi-Tech Park, Rajshahi, Bangladesh</span></li>
-                        <li class="flex items-center gap-3"><i class="ph-fill ph-phone text-primary"></i><span>+8801 343550533</span></li>
-                        <li class="flex items-center gap-3"><i class="ph-fill ph-envelope-simple text-primary"></i><span>asifiqbal.abir@gmail.com</span></li>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-6">Contact Us</h3>
+                    <ul class="space-y-4 text-gray-600 text-sm">
+                        <li class="flex items-start gap-3"><i
+                                class="ph-fill ph-map-pin text-primary mt-1"></i><span>Level-5, Block-C, Silicon
+                                Tower,<br>Hi-Tech Park, Rajshahi, Bangladesh</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="ph-fill ph-phone text-primary"></i><span>+8801717-187955</span></li>
+                        <li class="flex items-center gap-3"><i
+                                class="ph-fill ph-envelope-simple text-primary"></i><span>asifiqbal.abir@gmail.com</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-slate-500 text-sm text-center md:text-left">&copy; 2026 Ontek Horizon. All rights reserved.</p>
-                <div class="flex space-x-6 text-sm text-slate-500">
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                    <a href="#" class="hover:text-white">Terms of Service</a>
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm text-center md:text-left">&copy; 2026 Ontek Horizon. All rights
+                    reserved.</p>
+                <div class="flex space-x-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-gray-900">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-900">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
-    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
-        <button class="absolute top-4 right-4 text-white text-4xl hover:text-purple-400 focus:outline-none">&times;</button>
-        <img id="lightbox-img" src="" alt="Gallery Image" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
+    <div id="lightbox"
+        class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0"
+        onclick="closeLightbox()">
+        <button
+            class="absolute top-4 right-4 text-white text-4xl hover:text-purple-400 focus:outline-none">&times;</button>
+        <img id="lightbox-img" src="" alt="Gallery Image"
+            class="max-w-full max-h-[90vh] rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
     </div>
-    
-    <button id="backToTop" title="Back to top" aria-label="Scroll back to top">
-        <i class="ph-bold ph-arrow-up"></i>
-    </button>
-    
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS with faster animations
-        AOS.init({ duration: 400, once: true, offset: 50, easing: 'ease-out' });
-
-        // Preloader with animation time
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('preloader').style.opacity = '0';
-                document.getElementById('preloader').style.transition = 'opacity 0.5s ease';
-                setTimeout(function() {
-                    document.getElementById('preloader').style.display = 'none';
-                }, 500);
-                initThreeJSGlobe(); // Init Globe
-                initTypewriter();   // Init Typewriter
-            }, 2000);
-        });
-
-        // Spotlight Effect
-        document.addEventListener('mousemove', function(e) {
-            document.querySelectorAll('.spotlight-card').forEach(card => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-            });
-        });
-
-        // FAQ Accordion
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const content = header.nextElementSibling;
-                const icon = header.querySelector('.toggle-icon');
-                document.querySelectorAll('.accordion-content').forEach(item => {
-                    if (item !== content) {
-                        item.classList.remove('open');
-                        item.previousElementSibling.querySelector('.toggle-icon').classList.remove('ph-minus');
-                        item.previousElementSibling.querySelector('.toggle-icon').classList.add('ph-plus');
-                    }
-                });
-                content.classList.toggle('open');
-                icon.classList.toggle('ph-plus');
-                icon.classList.toggle('ph-minus');
-            });
-        });
-
-        // Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200;
-            counters.forEach(counter => {
-                const animate = () => {
-                    const value = +counter.getAttribute('data-target');
-                    const data = +counter.innerText;
-                    const time = value / speed;
-                    if (data < value) {
-                        counter.innerText = Math.ceil(data + time);
-                        setTimeout(animate, 1);
-                    } else {
-                        counter.innerText = value;
-                    }
-                }
-                animate();
-            });
-        }
-        const counterSection = document.querySelector('section:has(.counter)');
-        if (counterSection) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateCounters();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            observer.observe(counterSection);
-        }
-
-        // Mobile Menu
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        if (btn && menu) {
-            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-            menu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menu.classList.add('hidden'); }); });
-        }
-
-        // Navbar Scroll
-        let ticking = false;
-        const navbar = document.getElementById('navbar');
-        function updateNavbar() {
-            if (navbar) {
-                if (window.scrollY > 20) { navbar.classList.add('shadow-md'); navbar.classList.replace('h-20', 'h-16'); }
-                else { navbar.classList.remove('shadow-md'); navbar.classList.replace('h-16', 'h-20'); }
-            }
-            ticking = false;
-        }
-        window.addEventListener('scroll', function() { if (!ticking) { requestAnimationFrame(updateNavbar); ticking = true; } });
-
-        function initTypewriter() {
-            const textElement = document.getElementById('typewriter-text');
-            const phrases = ["Digital E-Commerce", "Amazon Growth", "AI Solutions", "Software Systems", "Content Writing", "Graphics Design", "Digital Marketing"];
-            let phraseIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            let typeSpeed = 100;
-
-            function type() {
-                const currentPhrase = phrases[phraseIndex];
-                
-                if (isDeleting) {
-                    textElement.textContent = currentPhrase.substring(0, charIndex - 1);
-                    charIndex--;
-                    typeSpeed = 50; 
-                } else {
-                    textElement.textContent = currentPhrase.substring(0, charIndex + 1);
-                    charIndex++;
-                    typeSpeed = 150;
-                }
-
-                if (!isDeleting && charIndex === currentPhrase.length) {
-                    isDeleting = true;
-                    typeSpeed = 2000; // Pause at end
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases.length;
-                    typeSpeed = 500; // Pause before new word
-                }
-
-                setTimeout(type, typeSpeed);
-            }
-            type();
-        }
-
-        function initThreeJSGlobe() {
-            const container = document.getElementById('globe-container');
-            if (!container) return;
-
-            const scene = new THREE.Scene();
-            
-            // Camera setup
-            const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-            camera.position.z = 20; // Zoom out to see globe
-
-            // Renderer setup
-            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-            renderer.setSize(container.clientWidth, container.clientHeight);
-            renderer.setPixelRatio(window.devicePixelRatio);
-            container.appendChild(renderer.domElement);
-
-            // Particles Geometry (The Globe)
-            const particlesGeometry = new THREE.BufferGeometry();
-            const particlesCount = 1500; // Number of dots
-            const posArray = new Float32Array(particlesCount * 3);
-
-            for(let i = 0; i < particlesCount * 3; i+=3) {
-                // Sphere math to distribute points
-                const r = 10; // radius
-                const theta = Math.random() * Math.PI * 2;
-                const phi = Math.acos(2 * Math.random() - 1);
-                
-                posArray[i] = r * Math.sin(phi) * Math.cos(theta);     // x
-                posArray[i+1] = r * Math.sin(phi) * Math.sin(theta);   // y
-                posArray[i+2] = r * Math.cos(phi);                     // z
-            }
-
-            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-            // Material
-            const particlesMaterial = new THREE.PointsMaterial({
-                size: 0.15,
-                color: 0x3B82F6, // Brand Blue
-                transparent: true,
-                opacity: 0.8,
-            });
-
-            // Mesh
-            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-            scene.add(particlesMesh);
-
-            // Mouse Interaction
-            let mouseX = 0;
-            let mouseY = 0;
-            
-            document.addEventListener('mousemove', (event) => {
-                mouseX = event.clientX / window.innerWidth - 0.5;
-                mouseY = event.clientY / window.innerHeight - 0.5;
-            });
-
-            // Animation Loop
-            const clock = new THREE.Clock();
-
-            function animate() {
-                const elapsedTime = clock.getElapsedTime();
-
-                // Auto Rotation
-                particlesMesh.rotation.y = elapsedTime * 0.1; 
-
-                // Mouse Interaction (Tilt)
-                particlesMesh.rotation.x += (mouseY * 0.5 - particlesMesh.rotation.x) * 0.05;
-                particlesMesh.rotation.y += (mouseX * 0.5 - (particlesMesh.rotation.y - (elapsedTime * 0.1))) * 0.05;
-
-                renderer.render(scene, camera);
-                window.requestAnimationFrame(animate);
-            }
-            animate();
-
-            // Handle Resize
-            window.addEventListener('resize', () => {
-                camera.aspect = container.clientWidth / container.clientHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(container.clientWidth, container.clientHeight);
-            });
-        }
-
-        (function(){
-            const desktopBtn = document.getElementById('theme-toggle');
-            const desktopIcon = document.getElementById('theme-icon');
-            const mobileBtn = document.getElementById('theme-toggle-mobile');
-            const mobileIcon = document.getElementById('theme-icon-mobile');
-
-            function setTheme(theme){
-                if(theme === 'light'){
-                    document.body.classList.add('light-mode');
-                    if(desktopIcon) desktopIcon.className = 'ph ph-sun text-xl';
-                    if(mobileIcon) mobileIcon.className = 'ph ph-sun mr-2';
-                } else {
-                    document.body.classList.remove('light-mode');
-                    if(desktopIcon) desktopIcon.className = 'ph ph-moon-stars text-xl';
-                    if(mobileIcon) mobileIcon.className = 'ph ph-moon-stars mr-2';
-                }
-                try{ localStorage.setItem('ontek-theme', theme); }catch(e){}
-            }
-
-            // initialize
-            let saved = null;
-            try{ saved = localStorage.getItem('ontek-theme'); }catch(e){}
-            if(!saved){ saved = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark'; }
-            setTheme(saved);
-
-            if(desktopBtn) desktopBtn.addEventListener('click', ()=> setTheme(document.body.classList.contains('light-mode') ? 'dark' : 'light'));
-            if(mobileBtn) mobileBtn.addEventListener('click', ()=> { setTheme(document.body.classList.contains('light-mode') ? 'dark' : 'light'); mobileBtn.blur(); });
-        })();
-
-        function openLightbox(element) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const src = element.querySelector('img').src;
-            
-            lightboxImg.src = src;
-            lightbox.classList.remove('hidden');
-            setTimeout(() => {
-                lightbox.classList.remove('opacity-0');
-                lightboxImg.classList.remove('scale-95');
-                lightboxImg.classList.add('scale-100');
-            }, 10);
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            
-            lightbox.classList.add('opacity-0');
-            lightboxImg.classList.remove('scale-100');
-            lightboxImg.classList.add('scale-95');
-            
-            setTimeout(() => {
-                lightbox.classList.add('hidden');
-            }, 300);
-        }
-
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.about-carousel .carousel-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
-
-        function goToSlide(index) {
-            if (!slides.length) return;
-            slides[currentSlide].classList.remove('active');
-            dots[currentSlide]?.classList.remove('active');
-            currentSlide = index;
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide]?.classList.add('active');
-        }
-
-        function nextSlide() {
-            if (!slides.length) return;
-            const next = (currentSlide + 1) % slides.length;
-            goToSlide(next);
-        }
-
-        if (slides.length) {
-            setInterval(nextSlide, 4000);
-        }
-
-        // Scroll Progress Indicator
-        const scrollProgress = document.getElementById('scroll-progress');
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            if (scrollProgress) {
-                scrollProgress.style.width = scrollPercent + '%';
-            }
-        });
-
-        // Back to Top Button Functionality
-        const backToTopBtn = document.getElementById('backToTop');
-        
-        if (backToTopBtn) {
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopBtn.classList.add('show');
-                } else {
-                    backToTopBtn.classList.remove('show');
-                }
-            });
-        }
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/preloader.js" defer></script>
 </body>
+
 </html>

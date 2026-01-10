@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth" style="scroll-behavior: smooth;">
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light-mode" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,11 @@
     <meta name="keywords" content="Ontek Horizon team, leadership, e-commerce experts, software developers">
     <meta name="author" content="Ontek Horizon">
     <meta name="theme-color" content="#3B82F6">
-    <link rel="icon" type="image/png" href="../images/O.png">
+    <link rel="icon" href="../images/O.png" type="image/png">
+    <link rel="icon" href="../images/O.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/O.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="../images/O.png" sizes="180x180">
+    <link rel="shortcut icon" href="../images/O.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Our Team - Ontek Horizon</title>
@@ -32,187 +36,59 @@
             }
         }
     </script>
-    <style>
-        .glass-effect {
-            background: rgba(2, 6, 23, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .elegant-gradient {
-            background: linear-gradient(135deg, #000000 0%, #1e1b4b 50%, #172554 100%);
-            background-attachment: fixed;
-            transition: background 0.5s ease;
-        }
-
-        .light-mode, 
-        .light-mode body {
-            background-color: #ffffff !important;
-            background-image: none !important; 
-            color: #111827 !important;
-        }
-        
-        .light-mode .elegant-gradient { background: #ffffff !important; }
-
-        .light-mode .glass-effect,
-        .light-mode #navbar {
-            background: rgba(255, 255, 255, 0.98) !important;
-            border-bottom: 1px solid #e5e7eb !important;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-
-        .light-mode .text-white { color: #000000 !important; font-weight: 700 !important; } 
-        .light-mode .text-slate-300 { color: #374151 !important; font-weight: 500 !important; } 
-        .light-mode .text-slate-400 { color: #4b5563 !important; font-weight: 500 !important; } 
-        .light-mode .text-slate-500, .light-mode .text-slate-600 { color: #111827 !important; font-weight: 600 !important; }
-        .light-mode footer, .light-mode footer p, .light-mode footer a, .light-mode footer .text-slate-500 { color: #111827 !important; }
-
-        .light-mode .text-blue-400 { color: #2563eb !important; } 
-        .light-mode .text-purple-400 { color: #9333ea !important; } 
-        .light-mode .text-green-400 { color: #16a34a !important; } 
-        .light-mode .text-pink-400 { color: #db2777 !important; } 
-        .light-mode nav a { color: #111827 !important; font-weight: 600 !important; }
-        .light-mode nav a:hover { color: #2563eb !important; }
-        
-        .light-mode .bg-slate-900, .light-mode .bg-slate-900\/40, .light-mode .bg-white\/5 {
-            background-color: #f9fafb !important; 
-            border: 1px solid #e5e7eb !important;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-        }
-
-        .light-mode .border-slate-800, .light-mode .border-white\/10, .light-mode .border-white\/5 { border-color: #d1d5db !important; }
-
-        .light-mode #mobile-menu { background-color: #ffffff !important; border-top: 1px solid #e5e7eb !important; }
-        .light-mode .text-transparent { background-image: linear-gradient(to right, #2563eb, #9333ea, #db2777) !important; }
-        .light-mode footer { background-color: #ffffff !important; color: #0f1720 !important; border-top-color: #e5e7eb !important; backdrop-filter: none !important; }
-        .light-mode footer * { color: #0f1720 !important; }
-        .light-mode footer a:hover { color: #2563eb !important; }
-
-        /* Spotlight Effect */
-        .spotlight-card::before {
-            content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.08), transparent 40%);
-            z-index: 2; opacity: 0; transition: opacity 0.5s; pointer-events: none;
-        }
-        .light-mode .spotlight-card::before { background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(37, 99, 235, 0.1), transparent 40%); }
-        .spotlight-card:hover::before { opacity: 1; }
-
-        .animate-fade-in-up { animation: fade-in-up 0.8s ease-out; }
-        @keyframes fade-in-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .nav-height { height: 60px; }
-            .nav-height .flex { height: 60px; }
-            .nav-height img { height: 40px; }
-            .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        }
-        
-        @media (max-width: 480px) {
-            .team-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-        }
-        
-        /* Touch device optimizations */
-        @media (hover: none) and (pointer: coarse) {
-            .spotlight-card::before { display: none; }
-            .spotlight-card:hover { transform: none; }
-        }
-        
-        * { -webkit-tap-highlight-color: transparent; }
-
-        /* Back to Top Button */
-        #backToTop {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-            z-index: 99;
-        }
-        
-        #backToTop:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
-        }
-        
-        #backToTop.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .light-mode #backToTop {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        }
-    </style>
+    
+    <link rel='stylesheet' href='../assets/styles.css'>
+    <link rel='stylesheet' href='../assets/css/team.css'>
 </head>
 <body class="elegant-gradient font-sans text-white overflow-x-hidden">
-    <!-- Navigation -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="logo-container">
+                <img src="../images/Ontek.png" alt="Ontek Horizon" class="preloader-logo logo-gray">
+                <img src="../images/Ontek.png" alt="Ontek Horizon" class="preloader-logo logo-fill">
+            </div>
+        </div>
+    </div>
+    
     <nav class="fixed w-full z-50 glass-effect transition-all duration-300 nav-height" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
+            <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
                     <a href="../index.html">
-                        <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-20 w-auto">
+                        <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-12 w-auto">
                     </a>
                 </div>
                 <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
-                    <a href="../index.html" target="_blank" rel="noopener" aria-label="Home" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Home</a>
-                    <a href="../index.html#about" target="_blank" rel="noopener" aria-label="About Us" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">About</a>
-                    <a href="../index.html#services" target="_blank" rel="noopener" aria-label="Our Services" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Services</a>
-                    <a href="../index.html#trends" target="_blank" rel="noopener" aria-label="Market Trends" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Trends</a>
-                    <a href="../index.html#careers" target="_blank" rel="noopener" aria-label="Career Opportunities" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Careers</a>
-                    <a href="../index.html#events" target="_blank" rel="noopener" aria-label="Upcoming Events" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Events</a>
-                    <a href="team.html" target="_blank" rel="noopener" aria-label="Our Team" class="text-white hover:scale-105 font-medium transition-all">Team</a>
-                    <a href="../index.html#gallery" target="_blank" rel="noopener" aria-label="Photo Gallery" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Gallery</a>
-                    <button id="theme-toggle" class="theme-toggle-btn bg-slate-800/40 text-white hover:bg-slate-700/50 transition px-3 py-2 rounded-lg" aria-label="Toggle theme" title="Toggle theme">
-                        <i id="theme-icon" class="ph ph-moon-stars text-xl"></i>
-                    </button>
-                    <a href="../index.html#contact" target="_blank" rel="noopener" class="bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all shadow-lg shadow-white/10">Contact Us</a>
+                    <a href="../index.html" aria-label="Home" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Home</a>
+                    <a href="aboutus.html" aria-label="About Us" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">About</a>
+                    <a href="services.html" aria-label="Our Services" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Services</a>
+                    <a href="careers.html" aria-label="Career Opportunities" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Careers</a>
+                    <a href="team.html" aria-label="Our Team" class="text-purple-400 hover:text-purple-300 hover:scale-105 font-medium transition-all">Team</a>
+                    <a href="gallery.html" aria-label="Photo Gallery" class="text-slate-300 hover:text-white hover:scale-105 font-medium transition-all">Gallery</a>
+                    <a href="../index.html#contact" class="contact-btn px-4 py-2 md:px-5 md:py-2.5 rounded-lg font-semibold text-sm md:text-base transition-all">Contact Us</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-white hover:text-blue-400 focus:outline-none">
-                        <i class="ph ph-list text-3xl"></i>
+                        <i class="ph ph-list text-3xl menu-icon"></i>
+                        <i class="ph ph-x text-3xl menu-close-icon hidden"></i>
                     </button>
                 </div>
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 absolute w-full shadow-xl">
             <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="../index.html" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
-                <a href="../index.html#about" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
-                <a href="../index.html#services" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Services</a>
-                <a href="../index.html#trends" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Trends</a>
-                <a href="../index.html#careers" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Careers</a>
-                <a href="../index.html#events" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Events</a>
-                <a href="team.html" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-slate-800">Team</a>
-                <a href="../index.html#gallery" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
-                <a href="../index.html#contact" target="_blank" rel="noopener" class="block px-3 py-3 rounded-md text-base font-medium text-blue-400 hover:bg-slate-800">Contact Us</a>
-                <div class="pt-2">
-                    <button id="theme-toggle-mobile" class="w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800" aria-label="Toggle theme mobile">
-                        <i id="theme-icon-mobile" class="ph ph-moon-stars mr-2"></i> Toggle Theme
-                    </button>
-                </div>
+                <a href="../index.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
+                <a href="aboutus.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="services.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Services</a>
+                <a href="careers.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Careers</a>
+                <a href="team.html" class="block px-3 py-3 rounded-md text-base font-medium text-purple-400 hover:bg-slate-800">Team</a>
+                <a href="gallery.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                <a href="../index.html#contact" class="block px-3 py-3 rounded-md text-base font-medium text-blue-400 hover:bg-slate-800">Contact Us</a>
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-32 pb-16 md:pt-40 md:pb-20">
+    
+    <section class="pt-32 pb-8 md:pt-40 md:pb-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center" data-aos="fade-up">
                 <h2 class="text-sm sm:text-base text-purple-400 font-semibold tracking-wide uppercase">Our Team</h2>
@@ -222,23 +98,35 @@
         </div>
     </section>
 
-    <!-- Team Members Section -->
-    <section id="team" class="py-12 md:py-20">
+    
+    <section id="team" class="py-6 md:py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Founder & CEO -->
+            
             <div class="mb-16" data-aos="fade-up">
-                <h3 class="text-2xl font-heading font-bold text-white mb-8 text-center">Founder & CEO</h3>
-                <div class="flex justify-center">
-                    <!-- Sagin Jahan - CEO -->
-                    <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-xl shadow-lg overflow-hidden text-center group border border-red-300 hover:border-red-700 hover:from-red-600 hover:to-red-700 transition-all spotlight-card w-full max-w-sm" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-2xl font-heading font-bold text-white mb-8 text-center">Founders</h3>
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
+                    
+                    <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-xl shadow-lg overflow-hidden text-center group border border-red-300 hover:border-red-700 hover:from-red-600 hover:to-red-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-24px)] max-w-sm" data-aos="fade-up" data-aos-delay="100">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/sjprofile.PNG" alt="Sagin Jahan - Founder & CEO" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Sagin+Jahan'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-red-900 group-hover:text-white">Sagin Jahan</h3>
-                            <p class="text-sm text-red-700 font-medium mb-3 group-hover:text-red-100">Founder & CEO</p>
-                            <p class="text-red-600 text-sm mb-4 group-hover:text-white">Visionary leader driving innovation and strategic growth.</p>
-                            <a href="https://www.linkedin.com/in/sagin-jahan-302a27394/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-red-600 hover:text-red-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-red-700 font-medium text-center group-hover:text-red-100">Founder & CEO</p>
+                            <a href="https://www.linkedin.com/in/sagin-jahan-302a27394/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-red-600 hover:text-red-900 transition-colors group-hover:text-white mt-3">
+                                <i class="ph-fill ph-linkedin-logo text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-xl shadow-lg overflow-hidden text-center group border border-indigo-300 hover:border-indigo-700 hover:from-indigo-600 hover:to-indigo-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-24px)] max-w-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-56 overflow-hidden relative">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="" alt="Co-Founder" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Co-Founder'">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-indigo-900 group-hover:text-white">XYZ</h3>
+                            <p class="text-sm text-indigo-700 font-medium text-center group-hover:text-indigo-100">Co-Founder</p>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-indigo-600 hover:text-indigo-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
@@ -246,68 +134,63 @@
                 </div>
             </div>
 
-            <!-- Leadership Team -->
+            
             <div class="mb-16" data-aos="fade-up">
                 <h3 class="text-2xl font-heading font-bold text-white mb-8 text-center">Leadership Team</h3>
                 <div class="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
-                    <!-- Asif Iqbal Abir - Manager -->
+                    
                     <div class="bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-xl shadow-lg overflow-hidden text-center group border border-emerald-300 hover:border-emerald-700 hover:from-emerald-600 hover:to-emerald-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="100">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/abirvai.jpg" alt="Asif Iqbal Abir - Manager" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Asif+Iqbal+Abir'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-emerald-900 group-hover:text-white">Asif Iqbal Abir</h3>
-                            <p class="text-sm text-emerald-700 font-medium mb-3 group-hover:text-emerald-100">Manager</p>
-                            <p class="text-emerald-600 text-sm mb-4 group-hover:text-white">Leading teams to success with strategic management.</p>
+                            <p class="text-sm text-emerald-700 font-medium text-center group-hover:text-emerald-100">Manager</p>
                         </div>
                     </div>
 
-                    <!-- Naima Tasnim Nova - E-Commerce Account Manager -->
+                    
                     <div class="bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-xl shadow-lg overflow-hidden text-center group border border-emerald-300 hover:border-emerald-700 hover:from-emerald-600 hover:to-emerald-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="200">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/novaapu.png" alt="Naima Tasnim Nova - E-Commerce Account Manager" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Naima+Tasnim+Nova'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-emerald-900 group-hover:text-white">Naima Tasnim Nova</h3>
-                            <p class="text-sm text-emerald-700 font-medium mb-3 group-hover:text-emerald-100">E-Commerce Account Manager</p>
-                            <p class="text-emerald-600 text-sm mb-4 group-hover:text-white">Managing e-commerce accounts with expertise and precision.</p>
-                            <a href="https://www.linkedin.com/in/naima-tasnim-nova-5678a4227" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-emerald-600 hover:text-emerald-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-emerald-700 font-medium text-center group-hover:text-emerald-100">E-Commerce Account Manager</p>
+                            <a href="https://www.linkedin.com/in/naima-tasnim-nova-5678a4227" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-emerald-600 hover:text-emerald-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Operation Team -->
+ 
             <div class="mb-16" data-aos="fade-up">
                 <h3 class="text-2xl font-heading font-bold text-white mb-8 text-center">Operation Team</h3>
                 <div class="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
-                    <!-- Md Mazharul Islam Roni - Account Coordinator -->
+                    
                     <div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl shadow-lg overflow-hidden text-center group border border-purple-300 hover:border-purple-700 hover:from-purple-600 hover:to-purple-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="100">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/ronivai.png" alt="Md Mazharul Islam Roni - Account Coordinator" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Mazharul+Islam+Roni'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-purple-900 group-hover:text-white">Md Mazharul Islam Roni</h3>
-                            <p class="text-sm text-purple-700 font-medium mb-3 group-hover:text-purple-100">Account Coordinator (E-commerce)</p>
-                            <p class="text-purple-600 text-sm mb-4 group-hover:text-white">Coordinating e-commerce accounts with dedication and efficiency.</p>
-                            <a href="https://www.linkedin.com/in/mazharul-roni" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-purple-600 hover:text-purple-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-purple-700 font-medium text-center group-hover:text-purple-100">Account Coordinator (E-commerce)</p>
+                            <a href="https://www.linkedin.com/in/mazharul-roni" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-purple-600 hover:text-purple-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Sumaiya Akter - Account Coordinator -->
+                    
                     <div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl shadow-lg overflow-hidden text-center group border border-purple-300 hover:border-purple-700 hover:from-purple-600 hover:to-purple-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="200">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/TohaApu.png" alt="Sumaiya Akter - Account Coordinator" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Sumaiya+Akter'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-purple-900 group-hover:text-white">Sumaiya Akter</h3>
-                            <p class="text-sm text-purple-700 font-medium mb-3 group-hover:text-purple-100">Account Coordinator (E-commerce)</p>
-                            <p class="text-purple-600 text-sm mb-4 group-hover:text-white">Supporting e-commerce operations with precision and care.</p>
-                            <a href="https://www.linkedin.com/in/sumiislamtoha" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-purple-600 hover:text-purple-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-purple-700 font-medium text-center group-hover:text-purple-100">Account Coordinator (E-commerce)</p>
+                            <a href="https://www.linkedin.com/in/sumiislamtoha" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-purple-600 hover:text-purple-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
@@ -315,65 +198,61 @@
                 </div>
             </div>
 
-            <!-- Development Team -->
+            
             <div class="mb-16" data-aos="fade-up">
                 <h3 class="text-2xl font-heading font-bold text-white mb-8 text-center">Development Team</h3>
                 <div class="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
-                    <!-- Rowdraraz Paul - Web Developer -->
+                    
                     <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg overflow-hidden text-center group border border-blue-300 hover:border-blue-700 hover:from-blue-600 hover:to-blue-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="100">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/rowdra2.jpeg" alt="Rowdraraz Paul - Web Developer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Rowdraraz+Paul'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-blue-900 group-hover:text-white">Rowdraraz Paul</h3>
-                            <p class="text-sm text-blue-700 font-medium mb-3 group-hover:text-blue-100">Web Developer</p>
-                            <p class="text-blue-600 text-sm mb-4 group-hover:text-white">Crafting innovative digital experiences and solutions.</p>
-                            <a href="https://www.linkedin.com/in/rowdraraz-paul-511a3a374/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-blue-600 hover:text-blue-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-blue-700 font-medium text-center group-hover:text-blue-100">Web Developer</p>
+                            <a href="https://www.linkedin.com/in/rowdraraz-paul-511a3a374/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-blue-600 hover:text-blue-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Md. Mueid Shahriar - Web Developer -->
+                    
                     <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg overflow-hidden text-center group border border-blue-300 hover:border-blue-700 hover:from-blue-600 hover:to-blue-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="200">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/mueid2.jpg" alt="Md. Mueid Shahriar - Web Developer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Mueid+Shahriar'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-blue-900 group-hover:text-white">Md. Mueid Shahriar</h3>
-                            <p class="text-sm text-blue-700 font-medium mb-3 group-hover:text-blue-100">Web Developer</p>
-                            <p class="text-blue-600 text-sm mb-4 group-hover:text-white">Driving operational excellence and process optimization.</p>
-                            <a href="https://www.linkedin.com/in/mueid16/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-blue-600 hover:text-blue-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-blue-700 font-medium text-center group-hover:text-blue-100">Web Developer</p>
+                            <a href="https://www.linkedin.com/in/mueid16/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-blue-600 hover:text-blue-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Partho Sarkar - Web Developer -->
+                    
                     <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg overflow-hidden text-center group border border-blue-300 hover:border-blue-700 hover:from-blue-600 hover:to-blue-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="300">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/partho.JPG" alt="Partho Sarkar - Web Developer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Partho+Sarkar'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-blue-900 group-hover:text-white">Partho Sarkar</h3>
-                            <p class="text-sm text-blue-700 font-medium mb-3 group-hover:text-blue-100">Web Developer</p>
-                            <p class="text-blue-600 text-sm mb-4 group-hover:text-white">Crafting web experiences with creative design.</p>
-                            <a href="https://www.linkedin.com/in/parth0/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-blue-600 hover:text-blue-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-blue-700 font-medium text-center group-hover:text-blue-100">Web Developer</p>
+                            <a href="https://www.linkedin.com/in/parth0/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-blue-600 hover:text-blue-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Ayon Biswas - Graphic Designer -->
+                    
                     <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg overflow-hidden text-center group border border-blue-300 hover:border-blue-700 hover:from-blue-600 hover:to-blue-700 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="400">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/ayon.jpg" alt="Ayon Biswas - Graphic Designer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Ayon+Biswas'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-blue-900 group-hover:text-white">Ayon Biswas</h3>
-                            <p class="text-sm text-blue-700 font-medium mb-3 group-hover:text-blue-100">Graphic Designer</p>
-                            <p class="text-blue-600 text-sm mb-4 group-hover:text-white">Creating stunning visuals and brand identities.</p>
-                            <a href="https://www.linkedin.com/in/ayon-biswas-87748b264/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-blue-600 hover:text-blue-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-blue-700 font-medium text-center group-hover:text-blue-100">Graphic Designer</p>
+                            <a href="https://www.linkedin.com/in/ayon-biswas-87748b264/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-blue-600 hover:text-blue-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
@@ -381,88 +260,82 @@
                 </div>
             </div>
 
-            <!-- Marketing Team -->
+            
             <div class="mt-16" data-aos="fade-up">
                 <h3 class="text-2xl font-heading font-bold text-white mb-8 text-center">Marketing Team</h3>
                 <div class="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
-                    <!-- Md. Abu Sufiyan - Content Writer -->
+                    
                     <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl shadow-lg overflow-hidden text-center group border border-orange-300 hover:border-orange-700 hover:from-orange-500 hover:to-orange-600 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="100">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/abu sufiyan.png" alt="Md. Abu Sufiyan - Content Writer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Abu+Sufiyan'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-orange-900 group-hover:text-white">Md. Abu Sufiyan</h3>
-                            <p class="text-sm text-orange-700 font-medium mb-3 group-hover:text-orange-100">Content Writer</p>
-                            <p class="text-orange-600 text-sm mb-4 group-hover:text-white">Crafting compelling content that engages audiences.</p>
-                            <a href="https://www.linkedin.com/in/md-abusufiyan-378741269/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-orange-600 hover:text-orange-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-orange-700 font-medium text-center group-hover:text-orange-100">Content Writer</p>
+                            <a href="https://www.linkedin.com/in/md-abusufiyan-378741269/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-orange-600 hover:text-orange-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Tanvir Akter Sonia - Content Writer -->
+                    
                     <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl shadow-lg overflow-hidden text-center group border border-orange-300 hover:border-orange-700 hover:from-orange-500 hover:to-orange-600 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="200">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/sonia.jpg" alt="Tanvir Akter Sonia - Content Writer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Tanvir+Akter+Sonia'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-orange-900 group-hover:text-white">Tanvir Akter Sonia</h3>
-                            <p class="text-sm text-orange-700 font-medium mb-3 group-hover:text-orange-100">Content Writer</p>
-                            <p class="text-orange-600 text-sm mb-4 group-hover:text-white">Creating engaging content for digital platforms.</p>
-                            <a href="https://www.linkedin.com/in/tanvir-akter-sonia-525139255" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-orange-600 hover:text-orange-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-orange-700 font-medium text-center group-hover:text-orange-100">Content Writer</p>
+                            <a href="https://www.linkedin.com/in/tanvir-akter-sonia-525139255" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-orange-600 hover:text-orange-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Most.Tasnia Islam Falguni - Content Writer -->
+                    
                     <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl shadow-lg overflow-hidden text-center group border border-orange-300 hover:border-orange-700 hover:from-orange-500 hover:to-orange-600 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="300">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/Tasnia.png" alt="Most.Tasnia Islam Falguni - Content Writer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Tasnia+Islam+Falguni'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-orange-900 group-hover:text-white">Most.Tasnia Islam Falguni</h3>
-                            <p class="text-sm text-orange-700 font-medium mb-3 group-hover:text-orange-100">Content Writer</p>
-                            <p class="text-orange-600 text-sm mb-4 group-hover:text-white">Writing creative content for brand storytelling.</p>
+                            <p class="text-sm text-orange-700 font-medium text-center group-hover:text-orange-100">Content Writer</p>
                         </div>
                     </div>
 
-                    <!-- Maoluda Khatun Monira - Content Writer -->
+                    
                     <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl shadow-lg overflow-hidden text-center group border border-orange-300 hover:border-orange-700 hover:from-orange-500 hover:to-orange-600 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="400">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/Monira.png" alt="Maoluda Khatun Monira - Content Writer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Maoluda+Monira'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-orange-900 group-hover:text-white">Maoluda Khatun Monira</h3>
-                            <p class="text-sm text-orange-700 font-medium mb-3 group-hover:text-orange-100">Content Writer</p>
-                            <p class="text-orange-600 text-sm mb-4 group-hover:text-white">Producing quality content for marketing campaigns.</p>
-                            <a href="https://www.linkedin.com/in/maoluda-monira-370664300" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-orange-600 hover:text-orange-900 transition-colors group-hover:text-white">
+                            <p class="text-sm text-orange-700 font-medium text-center group-hover:text-orange-100">Content Writer</p>
+                            <a href="https://www.linkedin.com/in/maoluda-monira-370664300" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-orange-600 hover:text-orange-900 transition-colors group-hover:text-white mt-3">
                                 <i class="ph-fill ph-linkedin-logo text-2xl"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Maisha Farzana Rahman Mita - Content Writer -->
+                    
                     <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl shadow-lg overflow-hidden text-center group border border-orange-300 hover:border-orange-700 hover:from-orange-500 hover:to-orange-600 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="500">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/Mita.jpg" alt="Maisha Farzana Rahman Mita - Content Writer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Maisha+Mita'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-orange-900 group-hover:text-white">Maisha Farzana Rahman Mita</h3>
-                            <p class="text-sm text-orange-700 font-medium mb-3 group-hover:text-orange-100">Content Writer</p>
-                            <p class="text-orange-600 text-sm mb-4 group-hover:text-white">Developing content strategies for growth.</p>
+                            <p class="text-sm text-orange-700 font-medium text-center group-hover:text-orange-100">Content Writer</p>
                         </div>
                     </div>
 
-                    <!-- Onamika Akter Rupa - Content Writer -->
+                    
                     <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl shadow-lg overflow-hidden text-center group border border-orange-300 hover:border-orange-700 hover:from-orange-500 hover:to-orange-600 transition-all spotlight-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)]" data-aos="fade-up" data-aos-delay="600">
                         <div class="h-56 overflow-hidden relative">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" style="object-position: 50% 30%;" src="../images/Rupa.png" alt="Onamika Akter Rupa - Content Writer" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0f172a/ffffff?text=Onamika+Rupa'">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-orange-900 group-hover:text-white">Onamika Akter Rupa</h3>
-                            <p class="text-sm text-orange-700 font-medium mb-3 group-hover:text-orange-100">Content Writer</p>
-                            <p class="text-orange-600 text-sm mb-4 group-hover:text-white">Creating impactful content for audiences.</p>
+                            <p class="text-sm text-orange-700 font-medium text-center group-hover:text-orange-100">Content Writer</p>
                         </div>
                     </div>
                 </div>
@@ -470,132 +343,50 @@
         </div>
     </section>
 
-    <!-- Join Our Team CTA -->
+    
     <section class="py-16 md:py-24 bg-black/20 border-t border-white/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
             <h2 class="text-2xl sm:text-3xl font-heading font-bold text-white mb-4">Want to Join Our Team?</h2>
             <p class="text-slate-400 mb-8 text-lg">We're always looking for talented individuals to help us shape the future of digital innovation.</p>
-            <a href="../index.html#careers" class="inline-flex items-center px-8 py-4 text-base font-semibold rounded-full text-white bg-blue-600 hover:bg-yellow-400 hover:text-gray-900 transition-all shadow-lg shadow-blue-500/30 hover:shadow-yellow-400/50">
+            <a href="careers.html" class="inline-flex items-center px-8 py-4 text-base font-semibold rounded-full text-white bg-blue-600 hover:bg-yellow-400 hover:text-gray-900 transition-all shadow-lg shadow-blue-500/30 hover:shadow-yellow-400/50">
                 View Open Positions
                 <i class="ph-bold ph-arrow-right ml-2"></i>
             </a>
         </div>
     </section>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Back to top" aria-label="Scroll back to top">
-        <i class="ph-bold ph-arrow-up"></i>
-    </button>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({ duration: 400, once: true, offset: 50, easing: 'ease-out' });
 
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.toggle('ph-list');
-            icon.classList.toggle('ph-x');
-        });
-
-        // Close mobile menu when clicking a link
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('ph-list');
-                icon.classList.remove('ph-x');
-            });
-        });
-
-        // Theme Toggle
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
-                document.documentElement.classList.add('light-mode');
-                updateThemeIcons(true);
-            }
-        }
-
-        function updateThemeIcons(isLight) {
-            const themeIcon = document.getElementById('theme-icon');
-            const themeIconMobile = document.getElementById('theme-icon-mobile');
-            if (isLight) {
-                themeIcon.classList.replace('ph-moon-stars', 'ph-sun');
-                themeIconMobile.classList.replace('ph-moon-stars', 'ph-sun');
-            } else {
-                themeIcon.classList.replace('ph-sun', 'ph-moon-stars');
-                themeIconMobile.classList.replace('ph-sun', 'ph-moon-stars');
-            }
-        }
-
-        function toggleTheme() {
-            const isLight = document.documentElement.classList.toggle('light-mode');
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            updateThemeIcons(isLight);
-        }
-
-        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
-        document.getElementById('theme-toggle-mobile').addEventListener('click', toggleTheme);
-        initTheme();
-
-        // Back to Top Button
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Spotlight effect for cards
-        document.querySelectorAll('.spotlight-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-                card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-            });
-        });
-    </script>
-
-    <!-- Footer -->
-    <footer id="contact" class="bg-white text-slate-900 pt-16 pb-10 border-t border-slate-200">
+    
+    <footer id="contact" class="bg-black/40 backdrop-blur-xl text-white pt-12 sm:pt-16 pb-6 sm:pb-8 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10">
-                <div class="col-span-1 lg:col-span-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
+                <div class="col-span-1 lg:col-span-1" data-aos="fade-up">
                     <div class="flex items-center gap-2 mb-6 cursor-pointer" onclick="window.scrollTo(0,0)">
-                        <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/120x40?text=Ontek'" alt="Ontek Horizon Logo" class="h-12 w-auto">
+                        <img src="../images/Ontek.png" onerror="this.src='https://placehold.co/64x64/3B82F6/white?text=OH'" alt="Ontek Horizon Logo" class="h-16 w-auto">
                     </div>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Your partner for scaling globally on Amazon and optimizing digital commerce operations.</p>
-                    <div class="flex space-x-4 text-slate-500">
-                        <a href="https://www.facebook.com/share/1CFhjbwtVv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition-colors"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
-                        <a href="https://www.linkedin.com/company/ontek-horizon/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition-colors"><i class="ph-fill ph-linkedin-logo text-xl"></i></a>
-                        <a href="#" class="hover:text-slate-900 transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Your partner for scaling globally on Amazon and optimizing digital commerce operations.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1CFhjbwtVv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-twitter-logo text-2xl"></i></a>
+                        <a href="https://www.linkedin.com/company/ontek-horizon/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
                     </div>
                 </div>
-                <div>
+                <div data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
-                    <ul class="space-y-3 text-sm text-slate-600">
-                        <li><a href="../pages/aboutus.html" class="hover:text-slate-900 transition-colors">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-slate-900 transition-colors">Our Services</a></li>
-                        <li><a href="../index.html#trends" class="hover:text-slate-900 transition-colors">Global Trends</a></li>
-                        <li><a href="../index.html#careers" class="hover:text-slate-900 transition-colors">Careers & Internships</a></li>
-                        <li><a href="team.html" class="hover:text-slate-900 transition-colors">Team Members</a></li>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><a href="aboutus.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="careers.html" class="hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="team.html" class="hover:text-primary transition-colors">Team Members</a></li>
+                        <li><a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                <div>
+                <div data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-lg font-semibold mb-6">Services</h3>
-                    <ul class="space-y-3 text-sm text-slate-600">
+                    <ul class="space-y-3 text-slate-400 text-sm">
                         <li>Software Development</li>
                         <li>E-commerce Solutions</li>
                         <li>Amazon FBA & PPC</li>
@@ -603,23 +394,26 @@
                         <li>Graphics Design</li>
                     </ul>
                 </div>
-                <div>
+                <div data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
-                    <ul class="space-y-4 text-sm text-slate-600">
-                        <li class="flex items-start gap-3"><i class="ph-fill ph-map-pin text-slate-900 mt-1"></i><span>Level-5, Block-C, Silicon Tower,<br>Hi-Tech Park, Rajshahi, Bangladesh</span></li>
-                        <li class="flex items-center gap-3"><i class="ph-fill ph-phone text-slate-900"></i><span>+8801 343550533</span></li>
-                        <li class="flex items-center gap-3"><i class="ph-fill ph-envelope-simple text-slate-900"></i><span>asifiqbal.abir@gmail.com</span></li>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="flex items-start gap-3"><i class="ph-fill ph-map-pin text-primary mt-1"></i><span>Level-5, Block-C, Silicon Tower,<br>Hi-Tech Park, Rajshahi, Bangladesh</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-phone text-primary"></i><span>+8801717-187955</span></li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-envelope-simple text-primary"></i><span>asifiqbal.abir@gmail.com</span></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-slate-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-                <p class="text-center md:text-left">&copy; 2026 Ontek Horizon. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-slate-900">Privacy Policy</a>
-                    <a href="#" class="hover:text-slate-900">Terms of Service</a>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm text-center md:text-left">&copy; 2026 Ontek Horizon. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm text-slate-500">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
-</body>
+        <script src="../scripts/team.js" defer></script>
+        <script src="../scripts/preloader.js" defer></script>
+    </body>
 </html>
+
