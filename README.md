@@ -1,13 +1,13 @@
 # Ontek Horizon
 
-A modern, fully-responsive website for Ontek Horizon - providing digital innovation, e-commerce solutions, software development and career opportunities.
+A modern, fully-responsive website for Ontek Horizon - providing digital innovation, e-commerce solutions, software development, and career opportunities.
 
 ---
 
 ## 📋 Overview
 
 This website includes:
-- **Home Page**: Complete company showcase with services, team and events
+- **Home Page**: Complete company showcase with services, team, and events
 - **Events**: Registration pages for seminars and job fairs
 - **Careers**: Job applications and internship program pages
 - All pages feature dark/light theme toggle and responsive design
@@ -72,8 +72,8 @@ This website includes:
 
 ## 📞 Contact
 
-For inquiries about services, careers or events, please reach out through the website contact forms.
+For inquiries about services, careers, or events, please reach out through the website contact forms.
 
 ---
 
-**Last Updated**: January 2025
+**Last Updated**: December 2025
